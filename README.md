@@ -33,10 +33,8 @@ Drawio:
 
 Trello:
 
-![Alt text](trello.png)
+![Trello](trello.png)
 
 Github Link
 
 https://github.com/ekollie/Phase-2-Project
-
-
