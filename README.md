@@ -4,10 +4,7 @@ A one sentence description of your app
 	A productivity-focused text editor with a built in Pomodoro sequencer
 
 User stories
-	Text editor
-	The user will be able to create and edit text that can be saved as a project
-	The user will be able to see their stats for each project
-	The user will be able to switch between projects
+	Lets say someone is having trouble focusing or getting burnt out with their work. Their troubles will be no more when they use this pomodoro sequencer text editor! This productivity app allows you to get work done, and then at 5 minute intervals, forces you to take a break to play games. This will allow the user a much needed break from their work.
 
 Core Deliverables-
 
@@ -26,20 +23,12 @@ Pomodoro sequencer
 
 Wireframes (Figma, DrawIO, etc.)
 	./main.drawio
-(![Alt text](Phase-2-Figma.png))
-A tree of your React components (it may benefit you to write where state, props, and fetch requests will be)
-	./main.drawio
 
-A chart of your React routes
-	
-A chart of your json-server endpoints, their HTTP verbs, and what they are used for
-	
+![Alt text](Phase-2-Figma.png)
 
-An example of data for your db.json
-./sample-db.json	
+Github Link
 
-A link to your Github
-	https://github.com/ekollie/Phase-2-Project
+https://github.com/ekollie/Phase-2-Project
 
 
 	

@@ -131,8 +131,8 @@ const Snake = () => {
                 backgroundColor: isSnakeSegment
                   ? "green"
                   : isFood
-                  ? "red"
-                  : "white",
+                    ? "red"
+                    : "white",
                 border: "1px solid black",
               }}
             />
