@@ -26,6 +26,10 @@ Wireframes (Figma, DrawIO, etc.)
 
 ![Alt text](Phase-2-Figma.png)
 
+Trello
+	
+	https://trello.com/b/oSuZFkFU/phase2trellow
+
 Github Link
 
 https://github.com/ekollie/Phase-2-Project
