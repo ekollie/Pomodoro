@@ -21,16 +21,22 @@ Stretch-
     2.Add multiple games
     3.Multiplayer
 
-Pomodoro sequencer
-The user will be able to create a pomodoro timer during their project that automatically launches a game for (5?) minutes
+Wireframes:
 
-Wireframes (Figma, DrawIO, etc.)
-./main.drawio
+Figma:
 
 ![Alt text](Phase-2-Figma.png)
+
+Drawio:
+
+![Routes-map/Component-tree](Drawio.png)
+
+Trello:
+
+![Alt text](trello.png)
 
 Github Link
 
 https://github.com/ekollie/Phase-2-Project
 
-![Routes-map/Component-tree](Drawio.png)
+
