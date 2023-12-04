@@ -1,5 +1,8 @@
 Group Project
 
+Pomodoro sequencer
+	The user will be able to create a pomodoro timer during their project that automatically launches a game for (5) minutes 
+
 A one sentence description of your app
 	A productivity-focused text editor with a built in Pomodoro sequencer
 
@@ -18,17 +21,15 @@ Stretch-
     2.Add multiple games
     3.Multiplayer
 
-Pomodoro sequencer
-	The user will be able to create a pomodoro timer during their project that automatically launches a game for (5?) minutes 
-
-Wireframes (Figma, DrawIO, etc.)
-	./main.drawio
+Wireframe:
 
 ![Alt text](Phase-2-Figma.png)
 
-Trello
+Trello:
+
+![Alt text](trello.png)
 	
-	https://trello.com/b/oSuZFkFU/phase2trellow
+https://trello.com/b/oSuZFkFU/phase2trellow
 
 Github Link
 
