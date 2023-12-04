@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react"
 
 function Timer () {
+    /*created a separate variable in case we want to allow users to set their own times*/
+    /*Right now its hard-coded for 25 mins*/
     const initialTime = 25*60
     const [seconds, setSeconds] = useState(initialTime)
     const [isActive, setIsActive] = useState(false)
