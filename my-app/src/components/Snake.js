@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 const numRows = 10;
 const numCols = 10;
 
@@ -91,7 +90,7 @@ const Snake = () => {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(moveSnake, 300);
+    const intervalId = setInterval(moveSnake, 100);
 
     // Cleanup interval on component unmount
     return () => clearInterval(intervalId);
