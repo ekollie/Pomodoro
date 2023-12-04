@@ -1,7 +1,11 @@
 import React from "react"
 
-function Graph () {
+function Graph() {
+    return (
+        <div>
 
+        </div>
+    )
 }
 
 export default Graph

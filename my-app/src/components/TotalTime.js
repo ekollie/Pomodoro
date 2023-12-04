@@ -1,7 +1,9 @@
 import React from "react"
 
-function TotalTime () {
-
+function TotalTime() {
+    return (
+        <div></div>
+    )
 }
 
 export default TotalTime

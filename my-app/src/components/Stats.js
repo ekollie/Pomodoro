@@ -4,7 +4,7 @@ import Graph from "./Graph"
 import AdditionalStats from "./AdditionalStats"
 
 
-function Stats () {
+function Stats() {
 
 
     return (

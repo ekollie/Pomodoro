@@ -1,7 +1,9 @@
 import React from "react"
 
-function AdditionalStats () {
+function AdditionalStats() {
+    return (<div>
 
+    </div>)
 }
 
 export default AdditionalStats
