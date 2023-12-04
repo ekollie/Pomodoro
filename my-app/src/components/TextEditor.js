@@ -3,6 +3,9 @@ import React, { useState } from "react"
 function TextEditor() {
 
     const [editorContent, setEditorContent] = useState("")
+    const [charCount, setCharCount] = useState(0)
+    const [totalChars, setTotalChars] = useState(0)
+    const [efficiency, setEfficiency] = useState(0)
 
     function handleSubmit (event) {
         event.preventDefault()
@@ -10,11 +13,17 @@ function TextEditor() {
         /*POST REQUEST FOR A SEQUENCE + PATCH REQUEST FOR CONTENT UPDATE*/
         /*CREATE A FUNCTION THAT WILL TRIGGER ROUTE TO GAME*/
         /*handleSubmit should be invoked by timer expiration*/
+
+        /*key down counter needs separate state*/
+        /*measuring efficiency by finding difference between total keystrokes & character length of final*/
     }
 
     function handleChange (event) {
         event.preventDefault()
-        setEditorContent(event.target.value)
+        setEditorContent(event.target.value) /*keep*/
+        setCharCount((prevCount) => prevCount+1)
+        setTotalChars(event.target.value.length)
+        setEfficiency((totalChars/charCount)*100) /*keep*/
     }
 
     return (
