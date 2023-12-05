@@ -130,3 +130,8 @@ button {
   background-color: #282c34;
   margin: right;
 }
+
+#delete {
+  background-color: #282c34;
+  margin-top: 10px;
+}
