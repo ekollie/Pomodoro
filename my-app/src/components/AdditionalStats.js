@@ -1,7 +1,5 @@
-import React from "react"
+import React, { useState, useEffect } from "react";
 
-function AdditionalStats () {
+function AdditionalStats() {}
 
-}
-
-export default AdditionalStats
+export default AdditionalStats;

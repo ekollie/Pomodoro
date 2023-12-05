@@ -22,45 +22,45 @@
   "sequence": [
     {
       "sequence_id": 1,
-      "project_id": 1,
-      "sample_data_one": 20,
+      "project_id": 2,
+      "sample_data_one": 100,
       "sample_data_two": 50,
-      "date": "2023-12-6"
+      "date": "2023-12-5"
     },
     {
       "sequence_id": 2,
-      "project_id": 2,
-      "sample_data_one": 100,
+      "project_id": 1,
+      "sample_data_one": 79,
       "sample_data_two": 50,
       "date": "2023-12-6"
     },
     {
       "sequence_id": 3,
+      "project_id": 3,
+      "sample_data_one": 74,
+      "sample_data_two": 50,
+      "date": "2023-12-7"
+    },
+    {
+      "sequence_id": 4,
       "project_id": 2,
-      "sample_data_one": 67,
+      "sample_data_one": 50,
       "sample_data_two": 50,
       "date": "2023-12-8"
     },
     {
-      "sequence_id": 4,
-      "project_id": 1,
-      "sample_data_one": 84,
+      "sequence_id": 5,
+      "project_id": 2,
+      "sample_data_one": 80,
       "sample_data_two": 50,
       "date": "2023-12-9"
     },
     {
-      "sequence_id": 5,
-      "project_id": 2,
-      "sample_data_one": 49,
-      "sample_data_two": 50,
-      "date": "2023-12-10"
-    },
-    {
       "sequence_id": 6,
       "project_id": 1,
-      "sample_data_one": 99,
+      "sample_data_one": 68,
       "sample_data_two": 50,
-      "date": "2023-12-11"
+      "date": "2023-12-10"
     }
   ]
 }

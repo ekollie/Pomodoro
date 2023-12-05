@@ -1,7 +1,11 @@
-import React from "react"
+import React from "react";
 
-function TotalTime () {
-
+function TotalTime() {
+  return (
+    <div>
+      <h3>Total time spent</h3>
+    </div>
+  );
 }
 
-export default TotalTime
+export default TotalTime;
