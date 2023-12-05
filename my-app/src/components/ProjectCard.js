@@ -1,10 +1,10 @@
 import React from "react"
 
-function ProjectCard() {
+function ProjectCard(props) {
     // handler that checks for a click - nav link
     return (
         <div id='card'>
-            <p>Project card</p>
+            <p>{props.project.project_name}</p>
         </div>
 
     )

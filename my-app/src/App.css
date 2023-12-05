@@ -4,7 +4,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 30px;
   pointer-events: none;
 }
 
@@ -65,12 +65,13 @@
   justify-content: space-between;
   margin-bottom: 10px;
 
-
   /* Enable vertical scrolling */
 }
 
 #listBanner p {
   margin-left: 10px;
+
+
 }
 
 #listBanner button {
@@ -125,4 +126,8 @@
 button {
   background-color: #282c34;
   margin: right;
+}
+
+#delete {
+  margin-top: 15px;
 }
