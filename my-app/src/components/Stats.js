@@ -4,6 +4,7 @@ import Graph from "./Graph";
 import AdditionalStats from "./AdditionalStats";
 
 function Stats() {
+  const url = "http://localhost:3000";
   const [projectList, setProjectList] = useState([
     {
       project_id: 0,
@@ -23,12 +24,12 @@ function Stats() {
   ]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/sequences")
+    fetch(url + "/sequences")
       .then((res) => res.json())
       .then((sequences) => {
         setSequences(sequences);
       });
-  }, []);
+  });
 
   return (
     <div id="stats">
