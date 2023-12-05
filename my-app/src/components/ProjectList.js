@@ -1,26 +1,63 @@
+// import React, { useState } from "react";
+// import ProjectCard from "./ProjectCard";
+
+// function ProjectList() {
+//     const [projectComponents, setProjectComponents] = useState([]);
+
+//     const handleButtonClick = () => {
+
+//         setProjectComponents([...projectComponents, <ProjectCard key={projectComponents.length} />]);
+//     };
+
+//     return (
+//         <div id="projectList">
+//             <div id="listBanner">
+//                 <p>Projects</p>
+//                 <button onClick={handleButtonClick}>+</button>
+//             </div>
+//             {projectComponents.map((component, index) => (
+
+//                 <div key={index}>{component}</div>
+//             ))}
+//         </div>
+//     );
+// }
+
+// export default ProjectList;
 import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
 
 function ProjectList() {
-    const [projectComponents, setProjectComponents] = useState([]);
+  const [projectComponents, setProjectComponents] = useState([]);
 
-    const handleButtonClick = () => {
+  const handleButtonClick = () => {
+    setProjectComponents([
+      ...projectComponents,
+      <ProjectCard key={projectComponents.length} />,
+    ]);
+  };
+  const handleDelete = (index) => {
+    const updateComp = [...projectComponents];
+    updateComp.splice(index, 1);
+    setProjectComponents(updateComp);
+  };
 
-        setProjectComponents([...projectComponents, <ProjectCard key={projectComponents.length} />]);
-    };
-
-    return (
-        <div id="projectList">
-            <div id="listBanner">
-                <p>Projects</p>
-                <button onClick={handleButtonClick}>+</button>
-            </div>
-            {projectComponents.map((component, index) => (
-
-                <div key={index}>{component}</div>
-            ))}
+  return (
+    <div id="projectList">
+      <div id="listBanner">
+        <p>Projects</p>
+        <button onClick={handleButtonClick}>+</button>
+      </div>
+      {projectComponents.map((component, index) => (
+        <div key={index}>
+          {component}
+          <button id="delete" onClick={() => handleDelete(index)}>
+            Delete Project
+          </button>
         </div>
-    );
+      ))}
+    </div>
+  );
 }
 
 export default ProjectList;
