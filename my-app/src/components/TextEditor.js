@@ -47,10 +47,10 @@ function TextEditor() {
         event.preventDefault()
         setEditorContent(event.target.value) /*keep*/
         setCharCount((prevCount) => prevCount + 1)
-        setTotalChars(event.target.value.length)
-        setEfficiency((totalChars / charCount) * 100) /*keep*/
+        // keep for sequence
+        // setEfficiency((totalChars / charCount) * 100)
+        // setTotalChars(event.target.value.length)
     }
-
 
     return (
         <div>
@@ -64,10 +64,7 @@ function TextEditor() {
                     cols="90"
                     id="project-content"
                     name="project-content">
-                    
                 </textarea>
-                {/*REMOVE BUTTON LATER -- REPLACE WITH TIMER*/}
-                <button type="submit">Submit</button>
             </form>
         </div>
     )
