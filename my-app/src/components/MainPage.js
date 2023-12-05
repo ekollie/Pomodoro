@@ -1,15 +1,16 @@
 import React from "react"
 import ProjectList from "./ProjectList"
-import Stats from "./Stats"
+import ProjectName from './ProjectName'
 
-function MainPage () {
+function MainPage() {
 
     return (
-        <div>
+        <div id='container'>
+            <ProjectName />
             <ProjectList />
-            <Stats />
+
         </div>
-    )  
+    )
 }
 
 export default MainPage

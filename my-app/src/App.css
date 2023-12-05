@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -32,7 +33,96 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+#projectList {
+  background-color: black;
+  list-style-type: none;
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  box-shadow: 0px 2.1px 7px grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Set the flex container to a column layout */
+}
+
+#listBanner {
+  background-color: black;
+  box-shadow: 0px 2.1px 7px grey;
+  height: 50px;
+  width: 200px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+
+  /* Enable vertical scrolling */
+}
+
+#listBanner p {
+  margin-left: 10px;
+}
+
+#listBanner button {
+  margin-right: 10px;
+
+}
+
+
+
+#card:hover {
+  background-color: #3a3f4a;
+  /* Change the background color on hover */
+}
+
+#card {
+  background-color: #282c34;
+  font-size: small;
+  box-shadow: 0px 2.1px 7px grey;
+  height: 100px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 15px;
+
+  /* Add this line to center vertically */
+}
+
+#container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#projectName {
+  font-size: small;
+  box-shadow: 0px 2.1px 7px grey;
+  height: 50px;
+  width: 200px;
+  margin: left;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: left;
+
+}
+
+* {
+  color: white;
+}
+
+button {
+  background-color: #282c34;
+  margin: right;
 }
