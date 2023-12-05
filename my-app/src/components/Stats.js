@@ -4,7 +4,7 @@ import Graph from "./Graph";
 import AdditionalStats from "./AdditionalStats";
 
 function Stats() {
-  const url = "http://localhost:3000";
+  const url = "http://localhost:3001";
   const [projectList, setProjectList] = useState([
     {
       id: 0,

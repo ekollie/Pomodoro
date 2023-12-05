@@ -8,12 +8,13 @@ function TotalTime({ sequences }) {
   };
   return (
     <div>
-      <h1>Total Time</h1>
+      <h1>Pomodoro sequences</h1>
       <h2>
         {Math.floor(getTotalTime() / 60)}:
         {getTotalTime() % 60 < 10
           ? "0" + (getTotalTime() % 60)
-          : getTotalTime() % 60}
+          : getTotalTime() % 60}{" "}
+        minutes total
       </h2>
     </div>
   );
