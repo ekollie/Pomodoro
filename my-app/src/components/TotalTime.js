@@ -3,7 +3,7 @@ import React from "react";
 function TotalTime({ sequences }) {
   const getTotalTime = () => {
     return sequences
-      .map((sequence) => sequence.sample_data_two)
+      .map((sequence) => sequence.duration_seconds)
       .reduce((sum, val) => sum + val, 0);
   };
   return (

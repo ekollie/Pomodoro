@@ -7,18 +7,18 @@ function Stats() {
   const url = "http://localhost:3000";
   const [projectList, setProjectList] = useState([
     {
-      project_id: 0,
-      project_name: "",
-      project_category: "",
-      project_content: "",
+      id: 0,
+      name: "",
+      category: "",
+      content: "",
     },
   ]);
   const [sequences, setSequences] = useState([
     {
-      sequence_id: -1,
-      project_id: -1,
-      sample_data_one: -1,
-      sample_data_two: -1,
+      id: 0,
+      project_id: 0,
+      efficiency: 0,
+      duration_seconds: 0,
       date: "2023-12-5",
     },
   ]);

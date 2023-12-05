@@ -18,7 +18,7 @@ function Graph({ sequences }) {
               label: "Efficiency",
               // y-axis data plotting values
               data: sequences.map((sequence) => {
-                return sequence.sample_data_one;
+                return sequence.efficiency;
               }),
               fill: false,
               borderWidth: 4,
