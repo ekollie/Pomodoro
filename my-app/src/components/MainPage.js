@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectList from "./ProjectList";
 import ProjectName from "./ProjectName";
+import Stats from "./Stats";
 // import { NavLink } from "react-router-dom"
 
 function MainPage() {
