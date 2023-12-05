@@ -4,7 +4,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 40px;
   pointer-events: none;
 }
 
@@ -69,18 +69,37 @@
   /* Enable vertical scrolling */
 }
 
-#listBanner p {
-  margin-left: 10px;
-}
-
 #listBanner button {
   margin-right: 10px;
 
 }
 
+#listBanner p {
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  animation: neonGlow 1s infinite alternate;
+}
+
+@keyframes neonGlow {
+  to {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+  }
+}
+
+
 
 
 #card:hover {
+  background-color: #3a3f4a;
+  /* Change the background color on hover */
+}
+
+button:hover {
+  background-color: #3a3f4a;
+  /* Change the background color on hover */
+}
+
+#delete:hover {
   background-color: #3a3f4a;
   /* Change the background color on hover */
 }
@@ -120,10 +139,13 @@
 
 * {
   color: white;
+  outline-color: white;
 }
 
 #project-content {
-  color: #282c34;
+  color: white;
+  background-color: black;
+
 }
 
 button {

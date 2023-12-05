@@ -18,6 +18,7 @@ function ProjectList() {
     return (
         <div id="projectList">
             <div id="listBanner">
+                <img src='./logo192.png' className='App-logo' />
                 <p>Projects</p>
                 <button onClick={handleButtonClick}>+</button>
             </div>
