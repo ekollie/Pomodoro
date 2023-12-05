@@ -1,11 +1,22 @@
 import React from "react";
 
-function TotalTime() {
-    return (
-        <div>
-            <h3>Total time spent</h3>
-        </div>
-    );
+function TotalTime({ sequences }) {
+  const getTotalTime = () => {
+    return sequences
+      .map((sequence) => sequence.sample_data_two)
+      .reduce((sum, val) => sum + val, 0);
+  };
+  return (
+    <div>
+      <h1>Total Time</h1>
+      <h2>
+        {Math.floor(getTotalTime() / 60)}:
+        {getTotalTime() % 60 < 10
+          ? "0" + (getTotalTime() % 60)
+          : getTotalTime() % 60}
+      </h2>
+    </div>
+  );
 }
 
 export default TotalTime;
