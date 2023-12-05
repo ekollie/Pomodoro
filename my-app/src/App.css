@@ -122,6 +122,10 @@
   color: white;
 }
 
+#project-content {
+  color: #282c34;
+}
+
 button {
   background-color: #282c34;
   margin: right;
