@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Timer from "./Timer"
 
 function TextEditor() {
 
@@ -28,6 +29,7 @@ function TextEditor() {
 
     return (
         <div>
+            <Timer />
             <h1>Text Editor</h1>
             <form onSubmit={handleSubmit} >
                 <textarea value={editorContent} onChange={handleChange} rows="30" cols="90" id="project-content" name="project-content"></textarea>
