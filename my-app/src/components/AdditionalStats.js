@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-function AdditionalStats() {
+function AdditionalStats() {}
 
-}
+export default AdditionalStats;

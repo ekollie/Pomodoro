@@ -1,18 +1,18 @@
-import React from "react"
-import ProjectList from "./ProjectList"
-import ProjectName from './ProjectName'
+import React from "react";
+import ProjectList from "./ProjectList";
+import ProjectName from "./ProjectName";
 // import { NavLink } from "react-router-dom"
 
 function MainPage() {
-
-    return (
-        <div id='container'>
-            <ProjectName />
-            <ProjectList />
-            {/* <NavLink to="./snake">Snake</NavLink>
+  return (
+    <div id="container">
+      <ProjectName />
+      <ProjectList />
+      <Stats />
+      {/* <NavLink to="./snake">Snake</NavLink>
             <NavLink to="./texteditor">TextEditor</NavLink> */}
-        </div>
-    )
+    </div>
+  );
 }
 
-export default MainPage
+export default MainPage;

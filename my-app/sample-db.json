@@ -19,19 +19,19 @@
       "project_content": "HTML CSS JavaScript lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum"
     }
   ],
-  "sequence": [
+  "sequences": [
     {
       "sequence_id": 1,
       "project_id": 2,
       "sample_data_one": 100,
-      "sample_data_two": 50,
+      "sample_data_two": 56,
       "date": "2023-12-5"
     },
     {
       "sequence_id": 2,
       "project_id": 1,
       "sample_data_one": 79,
-      "sample_data_two": 50,
+      "sample_data_two": 110,
       "date": "2023-12-6"
     },
     {
@@ -52,7 +52,7 @@
       "sequence_id": 5,
       "project_id": 2,
       "sample_data_one": 80,
-      "sample_data_two": 50,
+      "sample_data_two": 500,
       "date": "2023-12-9"
     },
     {
