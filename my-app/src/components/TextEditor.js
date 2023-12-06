@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import Timer from "./Timer";
@@ -16,7 +16,6 @@ function TextEditor({
   const [efficiency, setEfficiency] = useState(0);
   const projUrl = "http://localhost:3001/projects";
   const seqUrl = "http://localhost:3001/sequences";
-  const [isActive, setIsActive] = useState(false);
   const navigate = useNavigate();
 
   const { state } = useLocation();
