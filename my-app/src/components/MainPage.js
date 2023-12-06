@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProjectList from "./ProjectList";
 import ProjectName from "./ProjectName";
 import Stats from "./Stats";
+
 // import { NavLink } from "react-router-dom"
 
 function MainPage() {
@@ -22,14 +23,21 @@ function MainPage() {
 
   // States
   const url = "http://localhost:3001";
-  const [projectList, setProjectList] = useState([]);
+  const [projectList, setProjectList] = useState([
+    {
+      id: -1,
+      name: "Loading name",
+      category: "Loading Category",
+      content: "Loading Content",
+    },
+  ]);
   const [selectedSequences, setSelectedSequences] = useState([
     {
       id: -1,
       project_id: 0,
       efficiency: 0,
       duration_seconds: 0,
-      date: "2023-12-5",
+      date: "No data",
     },
   ]);
   const [sequences, setSequences] = useState([
@@ -38,7 +46,7 @@ function MainPage() {
       project_id: 0,
       efficiency: 0,
       duration_seconds: 0,
-      date: "2023-12-5",
+      date: "No data",
     },
   ]);
   const [selectedProject, setSelectedProject] = useState({
@@ -103,11 +111,24 @@ function MainPage() {
   };
 
   const handleSelect = (e) => {
-    setSelectedSequences(() =>
-      sequences.filter((sequence) => {
+    setSelectedSequences(() => {
+      let sequenceArr = sequences.filter((sequence) => {
         return sequence.project_id == e.target.value;
-      })
-    );
+      });
+      if (sequenceArr.length == 0) {
+        return [
+          {
+            id: -1,
+            project_id: 0,
+            efficiency: 0,
+            duration_seconds: 0,
+            date: "2023-12-5",
+          },
+        ];
+      } else {
+        return sequenceArr;
+      }
+    });
     setSelectedProject(() => {
       return projectList
         .filter((project) => {
