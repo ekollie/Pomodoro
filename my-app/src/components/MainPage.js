@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProjectList from "./ProjectList";
 import ProjectName from "./ProjectName";
 import Stats from "./Stats";
-// import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 function MainPage() {
   // Initial Fetch
@@ -149,7 +149,8 @@ function MainPage() {
           selectedProject={selectedProject}
           projectList={projectList}
           sequences={sequences}
-        />
+        /><div>
+          <NavLink to="./snake"><button>snake</button></NavLink></div>
         {/* <NavLink to="./snake">Snake</NavLink>
             <NavLink to="./texteditor">TextEditor</NavLink> */}
       </div>

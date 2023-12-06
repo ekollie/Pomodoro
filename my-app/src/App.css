@@ -168,3 +168,24 @@ button {
   justify-items: center;
   align-items: center;
 }
+
+#snake {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+}
+
+#startButton {
+  margin-bottom: 10px;
+}
+
+#snakeBanner {
+  background-color: black;
+  width: 100vw;
+  height: 10vh;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}

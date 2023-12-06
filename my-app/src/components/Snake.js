@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 const numRows = 10;
 const numCols = 10;
 
@@ -13,6 +14,7 @@ const Snake = () => {
   const [food, setFood] = useState(getRandomFoodPosition());
   const [direction, setDirection] = useState("RIGHT");
   const [gameOver, setGameOver] = useState(false);
+  const [isGameRunning, setIsGameRunning] = useState(false);
 
   const handleKeyPress = (e) => {
     switch (e.key) {
@@ -33,8 +35,16 @@ const Snake = () => {
     }
   };
 
+  const startGame = () => {
+    setSnake([{ row: 0, col: 0 }]);
+    setFood(getRandomFoodPosition());
+    setDirection("RIGHT");
+    setGameOver(false);
+    setIsGameRunning(true);
+  };
+
   const moveSnake = () => {
-    if (gameOver) return;
+    if (gameOver || !isGameRunning) return;
 
     const newSnake = snake.map((segment) => ({ ...segment }));
     const head = { ...newSnake[0] };
@@ -64,6 +74,7 @@ const Snake = () => {
       head.col >= numCols
     ) {
       setGameOver(true);
+      setIsGameRunning(false);
       return;
     }
 
@@ -74,6 +85,7 @@ const Snake = () => {
       )
     ) {
       setGameOver(true);
+      setIsGameRunning(false);
       return;
     }
 
@@ -94,19 +106,21 @@ const Snake = () => {
 
     // Cleanup interval on component unmount
     return () => clearInterval(intervalId);
-  }, [snake, direction, gameOver]);
+  }, [snake, direction, gameOver, isGameRunning]);
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeyPress);
 
     // Cleanup event listener on component unmount
     return () => window.removeEventListener("keydown", handleKeyPress);
-  }, []);
+  }, [isGameRunning]);
 
   return (
     <div>
-      <h1>{gameOver ? "Game Over" : "Snake Game"}</h1>
+      <div id='snakeBanner'> <h1 >{gameOver ? "Game Over" : "Snake Game"}</h1></div>
+      {!isGameRunning && <button id='startButton' onClick={startGame}>Start Game</button>}
       <div
+        id='snake'
         style={{
           display: "grid",
           gridTemplateColumns: `repeat(${numCols}, 30px)`,
