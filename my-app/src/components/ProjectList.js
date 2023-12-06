@@ -61,7 +61,7 @@ function ProjectList() {
     const updateComp = [...projectComponents];
     updateComp.splice(index, 1);
     setProjectComponents(updateComp);
-    fetch(`${url}/${index + 1}`, {
+    fetch(`${url}/${index}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
