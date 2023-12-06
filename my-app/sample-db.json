@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Journal",
       "category": "Writing",
-      "content": "Again Yesterday I Today I lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum"
+      "content": "Again Yesterday I Today I lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum alsdkjflaksdjflksa l;kj;lk asdfa sdfasdfasdf asdfas lkj ;lkjsdf asdfasdfsadfasdfasdfasdf lkj lk lkj l;kjasdf asdfasdf lkj lkj j asdf lkj l;kj asdf jlk lk lkj  lkj lkj l;kj lkjasdf asdf fdsasdf fdsa"
     },
     {
       "id": 2,
@@ -122,6 +122,62 @@
       "efficiency": 0,
       "duration_seconds": 1500,
       "character_count": 6,
+      "date": "2023-12-6"
+    },
+    {
+      "id": 8,
+      "project_id": 1,
+      "efficiency": 0,
+      "duration_seconds": 1500,
+      "character_count": 46,
+      "date": "2023-12-6"
+    },
+    {
+      "id": 9,
+      "project_id": 1,
+      "efficiency": 0,
+      "duration_seconds": 1500,
+      "character_count": 0,
+      "date": "2023-12-6"
+    },
+    {
+      "id": 10,
+      "project_id": 1,
+      "efficiency": 0,
+      "duration_seconds": 1500,
+      "character_count": 44,
+      "date": "2023-12-6"
+    },
+    {
+      "id": 11,
+      "project_id": 1,
+      "efficiency": 0,
+      "duration_seconds": 1500,
+      "character_count": 34,
+      "date": "2023-12-6"
+    },
+    {
+      "id": 12,
+      "project_id": 1,
+      "efficiency": 0,
+      "duration_seconds": 1500,
+      "character_count": 37,
+      "date": "2023-12-6"
+    },
+    {
+      "id": 13,
+      "project_id": 1,
+      "efficiency": 0,
+      "duration_seconds": 1500,
+      "character_count": 18,
+      "date": "2023-12-6"
+    },
+    {
+      "id": 14,
+      "project_id": 1,
+      "efficiency": 0,
+      "duration_seconds": 1500,
+      "character_count": 0,
       "date": "2023-12-6"
     }
   ]

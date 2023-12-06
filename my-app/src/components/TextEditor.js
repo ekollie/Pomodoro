@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import Timer from "./Timer"
 
-function TextEditor() {
+function TextEditor({isActive,setIsActive,seconds,setSeconds,initialTime}) {
 
     const [editorContent, setEditorContent] = useState("")
     const [charCount, setCharCount] = useState(0)
@@ -10,7 +10,6 @@ function TextEditor() {
     const [efficiency, setEfficiency] = useState(0)
     const projUrl = "http://localhost:3001/projects"
     const seqUrl = "http://localhost:3001/sequences"
-    const [isActive, setIsActive] = useState(false)
     const navigate = useNavigate()
     const tempProjId = 1
 
@@ -29,6 +28,7 @@ function TextEditor() {
 
     function handleSubmit() {
         /*POST REQUEST FOR A SEQUENCE + PATCH REQUEST FOR CONTENT UPDATE*/
+        setCharCount((prevCount) => prevCount + 1)
         const newSequence = {
             id: "",
             project_id: tempProjId,
@@ -56,6 +56,7 @@ function TextEditor() {
 
     function handleChange(event) {
         event.preventDefault()
+        setIsActive(true)
         setEditorContent(event.target.value) /*keep*/
         setCharCount((prevCount) => prevCount + 1)
         // keep for sequence
@@ -65,7 +66,14 @@ function TextEditor() {
 
     return (
         <div>
-            <Timer isActive={isActive} setIsActive={setIsActive} onExpiration={handleTimerExpiration}/>
+            <Timer 
+                isActive={isActive}
+                setIsActive={setIsActive}
+                onExpiration={handleTimerExpiration}
+                seconds={seconds}
+                setSeconds={setSeconds}
+                initialTime={initialTime}
+            />
             <h1>Text Editor</h1>
             <form onSubmit={handleSubmit} >
                 <textarea 

@@ -1,7 +1,7 @@
 import MainPage from './components/MainPage';
 import Snake from './components/Snake'
 import App from './App';
-import TextEditor from './components/TextEditor';
+import TextEditorContainer from './components/TextEditorContainer';
 
 const routes = [
     {
@@ -10,7 +10,7 @@ const routes = [
         children: [
             {path: "/", element: <MainPage />},
             {path: "/snake", element: <Snake />},
-            {path: "/texteditor", element: <TextEditor/>}
+            {path: "/texteditor", element: <TextEditorContainer/>}
         ]
     }
 ];

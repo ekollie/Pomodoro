@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react"
 
-function Timer ({isActive,setIsActive,onExpiration}) {
+function Timer ({
+    isActive,
+    setIsActive,
+    onExpiration,
+    seconds,
+    setSeconds,
+    initialTime
+}) {
     /*created a separate variable in case we want to allow users to set their own times*/
     /*Right now its hard-coded for 25 mins*/
-    const initialTime = 5
-    const [seconds, setSeconds] = useState(initialTime)
 
 
     useEffect(()=> {
