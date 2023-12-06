@@ -16,6 +16,7 @@ function TextEditor({
   const [efficiency, setEfficiency] = useState(0);
   const projUrl = "http://localhost:3001/projects";
   const seqUrl = "http://localhost:3001/sequences";
+
   const navigate = useNavigate();
 
   const { state } = useLocation();
@@ -23,8 +24,15 @@ function TextEditor({
   console.log(new Date().toISOString().split("T")[0]);
 
   useState(() => {
-    setEditorContent(content);
-  }, [state]);
+    fetch(projUrl)
+      .then((res) => res.json())
+      .then((projects) => {
+        let currProject = projects.find((project) => {
+          return project.id === id;
+        });
+        return setEditorContent(currProject.content);
+      });
+  }, []);
 
   function handleSubmit() {
     /*POST REQUEST FOR A SEQUENCE + PATCH REQUEST FOR CONTENT UPDATE*/
@@ -33,7 +41,7 @@ function TextEditor({
       id: "",
       project_id: id,
       efficiency: efficiency,
-      duration_seconds: 1500,
+      duration_seconds: initialTime,
       character_count: charCount,
       date: new Date().toISOString().split("T")[0],
     };
