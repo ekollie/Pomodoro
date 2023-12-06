@@ -17,6 +17,12 @@
       "name": "Website",
       "category": "Coding",
       "content": "HTML CSS JavaScript lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum"
+    },
+    {
+      "name": "new project",
+      "category": "new category",
+      "content": "lorum ipsum",
+      "id": 4
     }
   ],
   "sequences": [

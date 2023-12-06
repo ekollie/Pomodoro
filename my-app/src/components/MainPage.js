@@ -103,18 +103,24 @@ function MainPage() {
   };
 
   const handleSelect = (e) => {
-    setSelectedSequences(() =>
-      sequences.filter((sequence) => {
+    setSelectedSequences(() => {
+      let sequenceArr = sequences.filter((sequence) => {
         return sequence.project_id == e.target.value;
-      })
-    );
-    setSelectedProject(() => {
-      return projectList
-        .filter((project) => {
-          return project.id == e.target.value;
-        })
-        .pop();
-    });
+      });
+      if (sequenceArr.length == 0) {
+        return [
+          {
+            id: -1,
+            project_id: 0,
+            efficiency: 0,
+            duration_seconds: 0,
+            date: "2023-12-5",
+          },
+        ];
+      } else {
+        return sequenceArr;
+      }
+    })
     console.log(selectedProject);
   };
 

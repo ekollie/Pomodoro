@@ -189,3 +189,8 @@ button {
   justify-content: center;
   margin-bottom: 10px;
 }
+
+#snakeTimer {
+  display: flex;
+  justify-content: center;
+}

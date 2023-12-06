@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const numRows = 10;
 const numCols = 10;
@@ -10,11 +11,14 @@ const Snake = () => {
     return { row, col };
   };
 
+  const navigate = useNavigate();
+
   const [snake, setSnake] = useState([{ row: 0, col: 0 }]);
   const [food, setFood] = useState(getRandomFoodPosition());
   const [direction, setDirection] = useState("RIGHT");
   const [gameOver, setGameOver] = useState(false);
   const [isGameRunning, setIsGameRunning] = useState(false);
+  const [timer, setTimer] = useState(60); // Initial timer value in seconds
 
   const handleKeyPress = (e) => {
     switch (e.key) {
@@ -41,6 +45,17 @@ const Snake = () => {
     setDirection("RIGHT");
     setGameOver(false);
     setIsGameRunning(true);
+
+    const intervalId = setInterval(() => {
+      setTimer((prevTimer) => {
+        if (prevTimer === 1) {
+          clearInterval(intervalId);
+          setIsGameRunning(false);
+          navigate("/");
+        }
+        return prevTimer - 1;
+      });
+    }, 1000); // Update the timer every second
   };
 
   const moveSnake = () => {
@@ -117,10 +132,18 @@ const Snake = () => {
 
   return (
     <div>
-      <div id='snakeBanner'> <h1 >{gameOver ? "Game Over" : "Snake Game"}</h1></div>
-      {!isGameRunning && <button id='startButton' onClick={startGame}>Start Game</button>}
+      <div id="snakeBanner">
+        <h1>{gameOver ? "Game Over" : "Snake Game"}</h1>
+
+      </div>
+      {isGameRunning && <div id='snakeTimer'> <p >Time remaining: {timer} seconds</p></div>}
+      {!isGameRunning && (
+        <button id="startButton" onClick={startGame}>
+          Start Game
+        </button>
+      )}
       <div
-        id='snake'
+        id="snake"
         style={{
           display: "grid",
           gridTemplateColumns: `repeat(${numCols}, 30px)`,
