@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import ProjectCard from "./ProjectCard";
 
 function ProjectList({
@@ -11,9 +11,10 @@ function ProjectList({
   return (
     <div id="projectList">
       <div id="listBanner">
+        <img src='./logo192.png' alt='logo' className='App-logo' />
         <p>Projects</p>
         <button onClick={addProject}>+</button>
-        <button onClick={showGlobalStats}>Global Stats</button>
+        <img onClick={showGlobalStats} src='Globe.png' alt='globe' height='50px' width='50px' />
       </div>
       {projectList.map((project) => (
         <ProjectCard

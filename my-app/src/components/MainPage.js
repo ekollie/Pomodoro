@@ -131,24 +131,28 @@ function MainPage() {
   };
 
   return (
-    <div id="container">
-      <ProjectName selectedProject={selectedProject} />
-      <ProjectList
-        projectList={projectList}
-        handleSelect={handleSelect}
-        handleDelete={handleDelete}
-        addProject={addProject}
-        showGlobalStats={showGlobalStats}
-      />
-      <Stats
-        url={url}
-        selectedSequences={selectedSequences}
-        selectedProject={selectedProject}
-        projectList={projectList}
-        sequences={sequences}
-      />
-      {/* <NavLink to="./snake">Snake</NavLink>
+    <div>
+      <div id="container">
+        <ProjectName selectedProject={selectedProject} />
+        <ProjectList
+          projectList={projectList}
+          handleSelect={handleSelect}
+          handleDelete={handleDelete}
+          addProject={addProject}
+          showGlobalStats={showGlobalStats}
+        /></div>
+      <div id='statsContainer'>
+
+        <Stats
+          url={url}
+          selectedSequences={selectedSequences}
+          selectedProject={selectedProject}
+          projectList={projectList}
+          sequences={sequences}
+        />
+        {/* <NavLink to="./snake">Snake</NavLink>
             <NavLink to="./texteditor">TextEditor</NavLink> */}
+      </div>
     </div>
   );
 }

@@ -25,8 +25,8 @@ function AdditionalStats({
       .sort((a, b) => a - b)
       .pop();
   };
-  const getWordCount = () => {};
-  const getMostRecentProject = () => {};
+  const getWordCount = () => { };
+  const getMostRecentProject = () => { };
 
   return (
     <div>

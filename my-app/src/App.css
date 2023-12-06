@@ -4,7 +4,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 30px;
   pointer-events: none;
 }
 
@@ -68,12 +68,11 @@
   /* Enable vertical scrolling */
 }
 
-#listBanner p {
-  margin-left: 10px;
-}
+
 
 #listBanner button {
-  margin-right: 10px;
+  margin-left: 5px;
+  margin-bottom: 15px;
 
 }
 
@@ -81,6 +80,8 @@
   color: #00ff00;
   text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
   animation: neonGlow 1s infinite alternate;
+  margin-left: 10px;
+  font-size: large;
 }
 
 @keyframes neonGlow {
@@ -131,12 +132,14 @@ button:hover {
   font-size: small;
   box-shadow: 0px 2.1px 7px grey;
   height: 50px;
-  width: 200px;
+  width: 100vw;
   margin: left;
   align-items: center;
   display: flex;
   justify-content: center;
   margin-left: left;
+  background-color: black;
+
 
 }
 
@@ -154,4 +157,14 @@ button:hover {
 button {
   background-color: #282c34;
   margin: right;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+#statsContainer {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
 }

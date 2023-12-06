@@ -6,7 +6,7 @@ Chart.register(CategoryScale);
 
 function Graph({ selectedSequences }) {
   return (
-    <div>
+    <div id='graph'>
       <Line
         data={{
           // x-axis label values
