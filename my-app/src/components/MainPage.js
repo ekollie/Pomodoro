@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProjectList from "./ProjectList";
 import ProjectName from "./ProjectName";
 import Stats from "./Stats";
-
-// import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 function MainPage() {
   // Initial Fetch

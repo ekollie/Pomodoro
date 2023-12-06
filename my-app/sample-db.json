@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Journal",
       "category": "Writing",
-      "content": "Again Yesterday I Today I lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum alsdkjflaksdjflksa l;kj;lk asdfa sdfasdfasdf asdfas lkj ;lkjsdf asdfasdfsadfasdfasdfasdf lkj lk lkj l;kjasdf asdfasdf lkj lkj j asdf lkj l;kj asdf jlk lk lkj  lkj lkj l;kj lkjasdf asdf fdsasdf fdsa asdf lkj alkj lkj lkj l;kasdf a;ldskjf asdf lkj lkj lkasdf lkj ;lkajsd flkasdj f;lsakdj f;lksajd f;lasjdk f;lajsdkf asdf  fasdf lkj lkj asd lk asd lkj aslk lkj asdf jlkj ;lkjasd ;l jasd lkj asdf asdf lkj lkj asdf lkj ;lkj sadfasdf fdasdf fdsasd asd lkj asd lkj as asd pizza pizza asd pizza pie ham"
+      "content": "Again Yesterday I Today I lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum alsdkjflaksdjflksa l;kj;lk asdfa sdfasdfasdf asdfas lkj ;lkjsdf asdfasdfsadfasdfasdfasdf lkj lk lkj l;kjasdf asdfasdf lkj lkj j asdf lkj l;kj asdf jlk lk lkj  lkj lkj l;kj lkjasdf asdf fdsasdf fdsa asdf lkj alkj lkj lkj l;kasdf a;ldskjf asdf lkj lkj lkasdf lkj ;lkajsd flkasdj f;lsakdj f;lksajd f;lasjdk f;lajsdkf asdf  fasdf lkj lkj asd lk asd lkj aslk lkj asdf jlkj ;lkjasd ;l jasd lkj asdf asdf lkj lkj asdf lkj ;lkj sadfasdf fdasdf fdsasd asd lkj asd lkj as asd pizza pizza asd pizza pie ham testinmg fnaiofnbla blacblacbj bla"
     },
     {
       "id": 2,
@@ -23,6 +23,12 @@
       "category": "new category",
       "content": "lorum ipsum",
       "id": 4
+    },
+    {
+      "name": "new project",
+      "category": "new category",
+      "content": "This is a brand new project hellow wo",
+      "id": 5
     }
   ],
   "sequences": [
@@ -145,6 +151,22 @@
       "duration_seconds": 1500,
       "character_count": 18,
       "date": "2023-12-6"
+    },
+    {
+      "id": 10,
+      "project_id": 1,
+      "efficiency": 0,
+      "duration_seconds": 5,
+      "character_count": 35,
+      "date": "2023-12-06"
+    },
+    {
+      "id": 11,
+      "project_id": 5,
+      "efficiency": 0,
+      "duration_seconds": 5,
+      "character_count": 38,
+      "date": "2023-12-06"
     }
   ]
 }
