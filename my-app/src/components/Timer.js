@@ -1,26 +1,40 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 
-function Timer ({isActive,setIsActive,onExpiration}) {
+function Timer ({
+    isActive,
+    setIsActive,
+    handleSubmit,
+    seconds,
+    setSeconds,
+    initialTime
+}) {
     /*created a separate variable in case we want to allow users to set their own times*/
     /*Right now its hard-coded for 25 mins*/
-    const initialTime = 5
-    const [seconds, setSeconds] = useState(initialTime)
 
+    const intervalRef = useRef(null)
 
     useEffect(()=> {
-        let intervalId
-
         if (isActive && seconds > 0) {
-            intervalId = setInterval(() => {
-                setSeconds(prevSeconds => prevSeconds -1)
+            intervalRef.current = setInterval(() => {
+                setSeconds(prevSeconds => {
+                    if (prevSeconds > 0) {
+                        return prevSeconds - 1
+                    } else {
+                        clearInterval(intervalRef.current)
+                        handleSubmit()
+                        return prevSeconds
+                    }
+                })
             }, 1000)
-        } else if (seconds === 0) {
-            clearInterval(intervalId)
-            onExpiration()
+        } else if ((seconds === 0 || !isActive) && intervalRef.current) {
+            clearInterval(intervalRef.current)
         }
 
-        return () => clearInterval(intervalId)
-    },[isActive, seconds, onExpiration])
+        return () => {
+            clearInterval(intervalRef.current)
+        }
+    },[isActive, seconds, handleSubmit, setSeconds])
+
     function resetTimer () {
         setSeconds(initialTime)
         setIsActive(false)

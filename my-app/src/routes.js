@@ -2,6 +2,7 @@ import MainPage from "./components/MainPage";
 import Snake from "./components/Snake";
 import App from "./App";
 import TextEditor from "./components/TextEditor";
+
 const routes = [
   {
     path: "/",
