@@ -1,73 +1,116 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Timer from "./Timer"
+import { useLocation } from "react-router-dom";
+import Timer from "./Timer";
 
-function TextEditor() {
+function TextEditor({
+  isActive,
+  setIsActive,
+  seconds,
+  setSeconds,
+  initialTime,
+}) {
+  const [editorContent, setEditorContent] = useState("");
+  const [charCount, setCharCount] = useState(0);
+  const [totalChars, setTotalChars] = useState(0);
+  const [efficiency, setEfficiency] = useState(0);
+  const projUrl = "http://localhost:3001/projects";
+  const seqUrl = "http://localhost:3001/sequences";
 
-    const [editorContent, setEditorContent] = useState("")
-    const [charCount, setCharCount] = useState(0)
-    const [totalChars, setTotalChars] = useState(0)
-    const [efficiency, setEfficiency] = useState(0)
-    const urls = "http://localhost:3001/projects"
-    const [isActive, setIsActive] = useState(false)
-    const navigate = useNavigate()
+  const navigate = useNavigate();
 
-    function handleTimerExpiration () {
-        handleSubmit()
-        /*This activates the route to the snake game once the clock expires*/
-        navigate("/snake")
+  const { state } = useLocation();
+  const { id, content, name } = state;
+  console.log(new Date().toISOString().split("T")[0]);
+
+  useState(() => {
+    fetch(projUrl)
+      .then((res) => res.json())
+      .then((projects) => {
+        let currProject = projects.find((project) => {
+          return project.id === id;
+        });
+        return setEditorContent(currProject.content);
+      });
+  }, []);
+
+  function handleSubmit() {
+    /*POST REQUEST FOR A SEQUENCE + PATCH REQUEST FOR CONTENT UPDATE*/
+    setCharCount((prevCount) => prevCount + 1);
+    const newSequence = {
+      id: "",
+      project_id: id,
+      efficiency: efficiency,
+      duration_seconds: initialTime,
+      character_count: charCount,
+      date: new Date().toISOString().split("T")[0],
+    };
+    fetch(seqUrl, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(newSequence),
+    }).then((res) => {
+      if (res.ok) {
+        console.log(res);
+      } else {
+        console.log("POST error");
+      }
+    });
+
+    /*PATCH REQUEST FOR CONTENT UPDATE*/
+    fetch(`${projUrl}/${id}`, {
+      method: "PATCH",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ content: editorContent }),
+    }).then((res) => {
+      if (res.ok) {
+        console.log(res);
+      } else {
+        console.log("PATCH error");
+      }
+    });
+  }
+
+  function handleChange(event) {
+    event.preventDefault();
+    setIsActive(true);
+    setEditorContent(event.target.value); /*keep*/
+    setCharCount((prevCount) => prevCount + 1);
+    // keep for sequence
+    // setEfficiency((totalChars / charCount) * 100)
+    // setTotalChars(event.target.value.length)
+  }
+
+  useEffect(() => {
+    if (isActive && seconds === 0) {
+      handleSubmit();
+      navigate("/snake");
     }
+  }, [isActive, seconds, navigate]);
 
-    function handleSubmit() {
-        /*POST REQUEST FOR A SEQUENCE + PATCH REQUEST FOR CONTENT UPDATE*/
-        /*CREATE A FUNCTION THAT WILL TRIGGER ROUTE TO GAME*/
-        /*handleSubmit should be invoked by timer expiration*/
-
-        /*key down counter needs separate state*/
-        /*measuring efficiency by finding difference between total keystrokes & character length of final*/
-
-        // const newProject = {
-        //     id: "",
-        //     project_id: "",
-        //     project_name: "",
-        //     project_category: "",
-        //     project_content: editorContent
-        // }
-
-        fetch(urls, {
-            method: "PATCH",
-            headers: {"content-type": "application/json"},
-            body: JSON.stringify({project_content: editorContent})
-        })
-        .then((res)=> {if(res.ok){console.log(res)} else {console.log("error")}})
-
-    }
-
-    function handleChange(event) {
-        event.preventDefault()
-        setEditorContent(event.target.value) /*keep*/
-        setCharCount((prevCount) => prevCount + 1)
-        // keep for sequence
-        // setEfficiency((totalChars / charCount) * 100)
-        // setTotalChars(event.target.value.length)
-    }
-
-    return (
-        <div>
-            <Timer isActive={isActive} setIsActive={setIsActive} onExpiration={handleTimerExpiration}/>
-            <h1>Text Editor</h1>
-            <form onSubmit={handleSubmit} >
-                <textarea 
-                    value={editorContent}
-                    onChange={handleChange}
-                    rows="30"
-                    cols="90"
-                    id="project-content"
-                    name="project-content">
-                </textarea>
-            </form>
-        </div>
-    )
+  return (
+    <div>
+      <Timer
+        isActive={isActive}
+        setIsActive={setIsActive}
+        onExpiration={handleSubmit}
+        seconds={seconds}
+        setSeconds={setSeconds}
+        initialTime={initialTime}
+      />
+      <h1>{name}</h1>
+      <form onSubmit={handleSubmit}>
+        <textarea
+          value={editorContent}
+          onChange={handleChange}
+          rows="30"
+          cols="90"
+          id="project-content"
+          name="project-content"
+        ></textarea>
+      </form>
+    </div>
+  );
 }
 
-export default TextEditor
+export default TextEditor;

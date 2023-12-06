@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import ProjectList from "./ProjectList";
 import ProjectName from "./ProjectName";
 import Stats from "./Stats";
-import { NavLink } from "react-router-dom"
+
+// import { NavLink } from "react-router-dom"
 
 function MainPage() {
   // Initial Fetch
@@ -22,14 +23,21 @@ function MainPage() {
 
   // States
   const url = "http://localhost:3001";
-  const [projectList, setProjectList] = useState([]);
+  const [projectList, setProjectList] = useState([
+    {
+      id: -1,
+      name: "Loading name",
+      category: "Loading Category",
+      content: "Loading Content",
+    },
+  ]);
   const [selectedSequences, setSelectedSequences] = useState([
     {
       id: -1,
       project_id: 0,
       efficiency: 0,
       duration_seconds: 0,
-      date: "2023-12-5",
+      date: "No data",
     },
   ]);
   const [sequences, setSequences] = useState([
@@ -38,7 +46,7 @@ function MainPage() {
       project_id: 0,
       efficiency: 0,
       duration_seconds: 0,
-      date: "2023-12-5",
+      date: "No data",
     },
   ]);
   const [selectedProject, setSelectedProject] = useState({
@@ -120,7 +128,14 @@ function MainPage() {
       } else {
         return sequenceArr;
       }
-    })
+    });
+    setSelectedProject(() => {
+      return projectList
+        .filter((project) => {
+          return project.id == e.target.value;
+        })
+        .pop();
+    });
     console.log(selectedProject);
   };
 
@@ -146,17 +161,21 @@ function MainPage() {
           handleDelete={handleDelete}
           addProject={addProject}
           showGlobalStats={showGlobalStats}
-        /></div>
-      <div id='statsContainer'>
-
+        />
+      </div>
+      <div id="statsContainer">
         <Stats
           url={url}
           selectedSequences={selectedSequences}
           selectedProject={selectedProject}
           projectList={projectList}
           sequences={sequences}
-        /><div>
-          <NavLink to="./snake"><button>snake</button></NavLink></div>
+        />
+        <div>
+          <NavLink to="./snake">
+            <button>snake</button>
+          </NavLink>
+        </div>
         {/* <NavLink to="./snake">Snake</NavLink>
             <NavLink to="./texteditor">TextEditor</NavLink> */}
       </div>

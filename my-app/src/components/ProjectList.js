@@ -1,5 +1,7 @@
-
+import React from "react"
 import ProjectCard from "./ProjectCard";
+import TextEditor from "./TextEditor";
+import { useNavigate } from "react-router-dom";
 
 function ProjectList({
   handleSelect,
@@ -16,14 +18,16 @@ function ProjectList({
         <button onClick={addProject}>+</button>
         <img onClick={showGlobalStats} src='Globe.png' alt='globe' height='50px' width='50px' />
       </div>
-      {projectList.map((project) => (
-        <ProjectCard
-          handleSelect={handleSelect}
-          handleDelete={handleDelete}
-          key={project.id}
-          {...project}
-        />
-      ))}
+      {projectList.map((project) => {
+        return (
+          <ProjectCard
+            handleSelect={handleSelect}
+            handleDelete={handleDelete}
+            key={project.id}
+            {...project}
+          />
+        );
+      })}
     </div>
   );
 }

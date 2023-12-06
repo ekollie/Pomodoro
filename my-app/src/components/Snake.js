@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 const numRows = 10;
 const numCols = 10;
 
@@ -134,9 +133,13 @@ const Snake = () => {
     <div>
       <div id="snakeBanner">
         <h1>{gameOver ? "Game Over" : "Snake Game"}</h1>
-
       </div>
-      {isGameRunning && <div id='snakeTimer'> <p >Time remaining: {timer} seconds</p></div>}
+      {isGameRunning && (
+        <div id="snakeTimer">
+          {" "}
+          <p>Time remaining: {timer} seconds</p>
+        </div>
+      )}
       {!isGameRunning && (
         <button id="startButton" onClick={startGame}>
           Start Game
@@ -167,14 +170,15 @@ const Snake = () => {
                 backgroundColor: isSnakeSegment
                   ? "green"
                   : isFood
-                    ? "red"
-                    : "white",
+                  ? "red"
+                  : "white",
                 border: "1px solid black",
               }}
             />
           );
         })}
       </div>
+      <NavLink to="/">Back to Home</NavLink>
     </div>
   );
 };

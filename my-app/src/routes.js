@@ -1,18 +1,21 @@
-import MainPage from './components/MainPage';
-import Snake from './components/Snake'
-import App from './App';
-import TextEditor from './components/TextEditor';
+import MainPage from "./components/MainPage";
+import Snake from "./components/Snake";
+import App from "./App";
+import TextEditorContainer from "./components/TextEditorContainer";
 
 const routes = [
-    {
-        path: "/",
-        element: <App />,
-        children: [
-            {path: "/", element: <MainPage />},
-            {path: "/snake", element: <Snake />},
-            {path: "/texteditor", element: <TextEditor/>}
-        ]
-    }
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      { path: "/", element: <MainPage /> },
+      { path: "/snake", element: <Snake /> },
+      {
+        path: "/projects/:projectId/texteditor",
+        element: <TextEditorContainer />,
+      },
+    ],
+  },
 ];
 
-export default routes
+export default routes;
