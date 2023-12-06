@@ -32,7 +32,7 @@ function AdditionalStats({
     <div>
       <h2>Average Efficiency: {getAverageEfficiency().toFixed(2)}%</h2>
       <h2>
-        Most Efficienct Sequence: {getMostEfficientSequence().toFixed(2)}% ||{" "}
+        Most Efficient Sequence: {getMostEfficientSequence().toFixed(2)}% ||{" "}
         {
           selectedSequences
             .filter((sequence) => {
