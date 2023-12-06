@@ -34,7 +34,7 @@
       "efficiency": 100,
       "duration_seconds": 50,
       "chararcter_count": 0,
-      "date": "2023-12-6"
+      "date": "2023-12-7"
     },
     {
       "id": 3,
@@ -46,7 +46,7 @@
     },
     {
       "id": 4,
-      "project_id": 1,
+      "project_id": 3,
       "efficiency": 84,
       "duration_seconds": 50,
       "chararcter_count": 0,
@@ -54,7 +54,7 @@
     },
     {
       "id": 5,
-      "project_id": 2,
+      "project_id": 1,
       "efficiency": 49,
       "duration_seconds": 50,
       "chararcter_count": 0,
@@ -62,11 +62,59 @@
     },
     {
       "id": 6,
-      "project_id": 1,
+      "project_id": 2,
       "efficiency": 99,
       "duration_seconds": 50,
       "chararcter_count": 0,
       "date": "2023-12-11"
+    },
+    {
+      "id": 1,
+      "project_id": 3,
+      "efficiency": 20,
+      "duration_seconds": 50,
+      "chararcter_count": 0,
+      "date": "2023-12-12"
+    },
+    {
+      "id": 2,
+      "project_id": 1,
+      "efficiency": 100,
+      "duration_seconds": 50,
+      "chararcter_count": 0,
+      "date": "2023-12-13"
+    },
+    {
+      "id": 3,
+      "project_id": 2,
+      "efficiency": 67,
+      "duration_seconds": 50,
+      "date": "2023-12-14",
+      "chararcter_count": 0
+    },
+    {
+      "id": 4,
+      "project_id": 3,
+      "efficiency": 84,
+      "duration_seconds": 50,
+      "chararcter_count": 0,
+      "date": "2023-12-15"
+    },
+    {
+      "id": 5,
+      "project_id": 1,
+      "efficiency": 49,
+      "duration_seconds": 50,
+      "chararcter_count": 0,
+      "date": "2023-12-16"
+    },
+    {
+      "id": 6,
+      "project_id": 2,
+      "efficiency": 99,
+      "duration_seconds": 50,
+      "chararcter_count": 0,
+      "date": "2023-12-17"
     }
   ]
 }

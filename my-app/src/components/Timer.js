@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react"
 
-function Timer () {
+function Timer ({isActive,setIsActive,onExpiration}) {
     /*created a separate variable in case we want to allow users to set their own times*/
     /*Right now its hard-coded for 25 mins*/
-    const initialTime = 25*60
+    const initialTime = 5
     const [seconds, setSeconds] = useState(initialTime)
-    const [isActive, setIsActive] = useState(false)
+
 
     useEffect(()=> {
         let intervalId
@@ -16,17 +16,18 @@ function Timer () {
             }, 1000)
         } else if (seconds === 0) {
             clearInterval(intervalId)
+            onExpiration()
         }
 
         return () => clearInterval(intervalId)
-    },[isActive, seconds])
+    },[isActive, seconds, onExpiration])
     function resetTimer () {
         setSeconds(initialTime)
         setIsActive(false)
     }
 
     function toggleTimer() {
-        setIsActive(prev => !prev)
+        setIsActive((prev) => !prev)
     }
 
     function formatTime (secs) {

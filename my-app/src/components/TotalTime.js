@@ -1,19 +1,20 @@
 import React from "react";
 
-function TotalTime({ sequences }) {
+function TotalTime({ selectedSequences, selectedProject }) {
   const getTotalTime = () => {
-    return sequences
+    return selectedSequences
       .map((sequence) => sequence.duration_seconds)
       .reduce((sum, val) => sum + val, 0);
   };
   return (
     <div>
-      <h1>Total Time</h1>
+      <h1>{selectedProject.id < 0 ? "Global Stats" : selectedProject.name}</h1>
       <h2>
         {Math.floor(getTotalTime() / 60)}:
         {getTotalTime() % 60 < 10
           ? "0" + (getTotalTime() % 60)
-          : getTotalTime() % 60}
+          : getTotalTime() % 60}{" "}
+        minutes total
       </h2>
     </div>
   );
