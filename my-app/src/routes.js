@@ -1,7 +1,7 @@
 import MainPage from "./components/MainPage";
 import Snake from "./components/Snake";
 import App from "./App";
-import TextEditor from "./components/TextEditor";
+import TextEditorContainer from "./components/TextEditorContainer";
 
 const routes = [
   {
@@ -12,7 +12,7 @@ const routes = [
       { path: "/snake", element: <Snake /> },
       {
         path: "/projects/:projectId/texteditor",
-        element: <TextEditor />,
+        element: <TextEditorContainer />,
       },
     ],
   },
