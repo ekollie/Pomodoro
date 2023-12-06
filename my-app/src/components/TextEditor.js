@@ -8,6 +8,7 @@ function TextEditor({isActive,setIsActive,seconds,setSeconds,initialTime}) {
     const [charCount, setCharCount] = useState(0)
     const [totalChars, setTotalChars] = useState(0)
     const [efficiency, setEfficiency] = useState(0)
+
     const projUrl = "http://localhost:3001/projects"
     const seqUrl = "http://localhost:3001/sequences"
     const navigate = useNavigate()
@@ -19,12 +20,12 @@ function TextEditor({isActive,setIsActive,seconds,setSeconds,initialTime}) {
         .then(proj => setEditorContent(proj.content))
     },[])
 
-    function handleTimerExpiration () {
-        handleSubmit()
-        /*This activates the route to the snake game once the clock expires*/
-        /*CREATE A FUNCTION THAT WILL TRIGGER ROUTE TO GAME*/
-        navigate("/snake")
-    }
+    // function handleTimerExpiration () {
+    //     handleSubmit()
+    //     /*This activates the route to the snake game once the clock expires*/
+    //     /*CREATE A FUNCTION THAT WILL TRIGGER ROUTE TO GAME*/
+    //     navigate("/snake")
+    // }
 
     function handleSubmit() {
         /*POST REQUEST FOR A SEQUENCE + PATCH REQUEST FOR CONTENT UPDATE*/
@@ -52,6 +53,8 @@ function TextEditor({isActive,setIsActive,seconds,setSeconds,initialTime}) {
         })
         .then((res)=> {if(res.ok){console.log(res)} else {console.log("PATH error")}})
 
+        console.log("handleSubmit")
+
     }
 
     function handleChange(event) {
@@ -59,17 +62,25 @@ function TextEditor({isActive,setIsActive,seconds,setSeconds,initialTime}) {
         setIsActive(true)
         setEditorContent(event.target.value) /*keep*/
         setCharCount((prevCount) => prevCount + 1)
+        
         // keep for sequence
         // setEfficiency((totalChars / charCount) * 100)
         // setTotalChars(event.target.value.length)
     }
+
+    useEffect(() => {
+        if (isActive && seconds === 0) {
+            handleSubmit()
+            navigate("/snake")
+        }
+    },[isActive,seconds,navigate])
 
     return (
         <div>
             <Timer 
                 isActive={isActive}
                 setIsActive={setIsActive}
-                onExpiration={handleTimerExpiration}
+                onExpiration={handleSubmit}
                 seconds={seconds}
                 setSeconds={setSeconds}
                 initialTime={initialTime}
