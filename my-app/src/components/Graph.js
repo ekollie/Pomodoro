@@ -22,7 +22,7 @@ function Graph({ selectedSequences }) {
               }),
               fill: true,
               borderWidth: 2,
-              backgroundColor: "green",
+              backgroundColor: "rgb(0, 255, 0, 0.1",
               borderColor: "lime",
               responsive: true,
             },
