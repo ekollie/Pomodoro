@@ -3,38 +3,20 @@ import TotalTime from "./TotalTime";
 import Graph from "./Graph";
 import AdditionalStats from "./AdditionalStats";
 
-function Stats() {
-  const [projectList, setProjectList] = useState([
-    {
-      id: 0,
-      name: "",
-      category: "",
-      content: "",
-    },
-  ]);
-  const [sequences, setSequences] = useState([
-    {
-      id: 0,
-      project_id: 0,
-      efficiency: 0,
-      duration_seconds: 0,
-      date: "2023-12-5",
-    },
-  ]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/sequences")
-      .then((res) => res.json())
-      .then((sequences) => {
-        setSequences(sequences);
-      });
-  }, []);
-
+function Stats({ selectedSequences, selectedProject, projectList, sequences }) {
   return (
     <div id="stats">
-      <TotalTime sequences={sequences} />
-      <Graph sequences={sequences} />
-      <AdditionalStats />
+      <TotalTime
+        selectedSequences={selectedSequences}
+        selectedProject={selectedProject}
+      />
+      <Graph selectedSequences={selectedSequences} />
+      <AdditionalStats
+        selectedSequences={selectedSequences}
+        selectedProject={selectedProject}
+        projectList={projectList}
+        sequences={sequences}
+      />
     </div>
   );
 }

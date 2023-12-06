@@ -8,9 +8,9 @@ import { Outlet } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Timer />
-      <TextEditor />
-      <Snake />
+      {/* <Timer /> */}
+      {/* <TextEditor /> */}
+      {/* <Snake /> */}
       {/* <MainPage /> */}
       <Outlet />
     </div>

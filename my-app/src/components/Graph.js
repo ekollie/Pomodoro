@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Line } from "react-chartjs-2";
 import { Chart } from "chart.js/auto";
 import { CategoryScale } from "chart.js";
 Chart.register(CategoryScale);
 
-function Graph({ sequences }) {
+function Graph({ selectedSequences }) {
   return (
     <div>
       <Line
         data={{
           // x-axis label values
-          labels: sequences.map((sequence) => {
+          labels: selectedSequences.map((sequence) => {
             return sequence.date;
           }),
           datasets: [
             {
               label: "Efficiency",
               // y-axis data plotting values
-              data: sequences.map((sequence) => {
+              data: selectedSequences.map((sequence) => {
                 return sequence.efficiency;
               }),
-              fill: false,
-              borderWidth: 4,
-              backgroundColor: "white",
-              borderColor: "red",
+              fill: true,
+              borderWidth: 2,
+              backgroundColor: "green",
+              borderColor: "lime",
               responsive: true,
             },
           ],

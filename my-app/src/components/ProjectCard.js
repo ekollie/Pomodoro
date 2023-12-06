@@ -1,14 +1,23 @@
-import React from "react"
+import React, { useState } from "react";
 
-function ProjectCard(props) {
+function ProjectCard({ name, id, handleDelete, handleSelect }) {
+  const handleRoute = (e) => {
     // handler that checks for a click - nav link
+  };
 
-    return (
-        <div id='card'>
-            <p>{props.project.project_name}</p>
-        </div>
-
-    )
+  return (
+    <div>
+      <div id="card">
+        <h3>{name}</h3>
+      </div>
+      <button value={id} id="delete" onClick={handleDelete}>
+        Delete Project
+      </button>
+      <button value={id} onClick={handleSelect}>
+        Stats
+      </button>
+    </div>
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;
