@@ -1,10 +1,12 @@
 import React from "react";
 
-function ProjectName() {
+function ProjectName({ selectedProject }) {
   return (
-    <div id>
+    <div>
       <div id="projectName">
-        <p>Project Name</p>
+        <h1>
+          {selectedProject[0].id < 0 ? "Global Stats" : selectedProject[0].name}
+        </h1>
       </div>
     </div>
   );
