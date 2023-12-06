@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 const numRows = 10;
 const numCols = 10;
 
@@ -138,6 +139,7 @@ const Snake = () => {
           );
         })}
       </div>
+      <NavLink to="/">Back to Home</NavLink>
     </div>
   );
 };
