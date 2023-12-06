@@ -5,7 +5,7 @@ function ProjectName({ selectedProject }) {
     <div>
       <div id="projectName">
         <h1>
-          {selectedProject[0].id < 0 ? "Global Stats" : selectedProject[0].name}
+          {selectedProject.id < 0 ? "Global Stats" : selectedProject.name}
         </h1>
       </div>
     </div>

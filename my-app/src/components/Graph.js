@@ -20,10 +20,10 @@ function Graph({ selectedSequences }) {
               data: selectedSequences.map((sequence) => {
                 return sequence.efficiency;
               }),
-              fill: false,
-              borderWidth: 4,
-              backgroundColor: "white",
-              borderColor: "red",
+              fill: true,
+              borderWidth: 2,
+              backgroundColor: "green",
+              borderColor: "lime",
               responsive: true,
             },
           ],

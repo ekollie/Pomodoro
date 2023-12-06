@@ -7,7 +7,9 @@ function ProjectCard({ name, id, handleDelete, handleSelect }) {
 
   return (
     <div>
-      <p>{name}</p>
+      <div id="card">
+        <h3>{name}</h3>
+      </div>
       <button value={id} id="delete" onClick={handleDelete}>
         Delete Project
       </button>

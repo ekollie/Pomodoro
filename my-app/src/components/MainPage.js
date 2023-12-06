@@ -5,27 +5,7 @@ import Stats from "./Stats";
 // import { NavLink } from "react-router-dom"
 
 function MainPage() {
-  const url = "http://localhost:3001";
-  const [projectList, setProjectList] = useState([]);
-  const [selectedSequences, setSelectedSequences] = useState([]);
-  const [sequences, setSequences] = useState([
-    {
-      id: -1,
-      project_id: 0,
-      efficiency: 0,
-      duration_seconds: 0,
-      date: "2023-12-5",
-    },
-  ]);
-  const [selectedProject, setSelectedProject] = useState([
-    {
-      id: -1,
-      name: "",
-      category: "",
-      content: "",
-    },
-  ]);
-
+  // Initial Fetch
   useEffect(() => {
     fetch(url + "/projects")
       .then((res) => res.json())
@@ -40,14 +20,43 @@ function MainPage() {
       });
   }, []);
 
+  // States
+  const url = "http://localhost:3001";
+  const [projectList, setProjectList] = useState([]);
+  const [selectedSequences, setSelectedSequences] = useState([
+    {
+      id: -1,
+      project_id: 0,
+      efficiency: 0,
+      duration_seconds: 0,
+      date: "2023-12-5",
+    },
+  ]);
+  const [sequences, setSequences] = useState([
+    {
+      id: -1,
+      project_id: 0,
+      efficiency: 0,
+      duration_seconds: 0,
+      date: "2023-12-5",
+    },
+  ]);
+  const [selectedProject, setSelectedProject] = useState({
+    id: -1,
+    name: "Loading name",
+    category: "Loading Category",
+    content: "Loading Content",
+  });
+
+  // Handler Functions
   const addProject = () => {
     fetch(url + "/projects", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
-        name: "new name",
+        name: "new project",
         category: "new category",
-        content: "",
+        content: "lorum ipsum",
       }),
     })
       .then((res) => res.json())
@@ -100,11 +109,25 @@ function MainPage() {
       })
     );
     setSelectedProject(() => {
-      return projectList.filter((project) => {
-        return project.id == e.target.value;
-      });
+      return projectList
+        .filter((project) => {
+          return project.id == e.target.value;
+        })
+        .pop();
     });
     console.log(selectedProject);
+  };
+
+  const showGlobalStats = () => {
+    setSelectedSequences(sequences);
+    setSelectedProject([
+      {
+        id: -1,
+        name: "",
+        category: "",
+        content: "",
+      },
+    ]);
   };
 
   return (
@@ -115,8 +138,15 @@ function MainPage() {
         handleSelect={handleSelect}
         handleDelete={handleDelete}
         addProject={addProject}
+        showGlobalStats={showGlobalStats}
       />
-      <Stats url={url} selectedSequences={selectedSequences} />
+      <Stats
+        url={url}
+        selectedSequences={selectedSequences}
+        selectedProject={selectedProject}
+        projectList={projectList}
+        sequences={sequences}
+      />
       {/* <NavLink to="./snake">Snake</NavLink>
             <NavLink to="./texteditor">TextEditor</NavLink> */}
     </div>

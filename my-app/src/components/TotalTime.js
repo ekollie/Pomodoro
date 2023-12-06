@@ -1,6 +1,6 @@
 import React from "react";
 
-function TotalTime({ selectedSequences }) {
+function TotalTime({ selectedSequences, selectedProject }) {
   const getTotalTime = () => {
     return selectedSequences
       .map((sequence) => sequence.duration_seconds)
@@ -8,7 +8,7 @@ function TotalTime({ selectedSequences }) {
   };
   return (
     <div>
-      <h1>Pomodoro electedS</h1>
+      <h1>{selectedProject.id < 0 ? "Global Stats" : selectedProject.name}</h1>
       <h2>
         {Math.floor(getTotalTime() / 60)}:
         {getTotalTime() % 60 < 10

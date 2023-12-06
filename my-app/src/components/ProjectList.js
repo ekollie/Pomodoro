@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
 
-function ProjectList({ handleSelect, handleDelete, addProject, projectList }) {
+function ProjectList({
+  handleSelect,
+  handleDelete,
+  addProject,
+  showGlobalStats,
+  projectList,
+}) {
   return (
     <div id="projectList">
       <div id="listBanner">
         <p>Projects</p>
         <button onClick={addProject}>+</button>
+        <button onClick={showGlobalStats}>Global Stats</button>
       </div>
       {projectList.map((project) => (
         <ProjectCard
