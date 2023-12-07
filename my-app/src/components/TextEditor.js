@@ -13,7 +13,7 @@ function TextEditor({
   const navigate = useNavigate();
   const { state } = useLocation();
 
-  const { id, content, name } = state;
+  const { category, id, content, name } = state;
   const [editorContent, setEditorContent] = useState("");
   const [keyCount, setKeyCount] = useState(0);
   const [totalCharLength, setTotalCharLength] = useState(0);
@@ -79,6 +79,7 @@ function TextEditor({
       body: JSON.stringify({
         name: newName,
         content: editorContent,
+        category: getBorderColor()
       }),
     }).then((res) => {
       if (res.ok) {
@@ -128,8 +129,7 @@ function TextEditor({
         return 'white'; // or a default color
     }
   };
-  const handleSelectSubmission = (e) => {
-  }
+
   return (
     <div>
       <Timer
@@ -148,7 +148,7 @@ function TextEditor({
         value={newName}
       />
       <div>
-        <form type='submit'>
+        <form onSubmit={handleSubmit}>
           <select id='select' onChange={handleSelectChange} value={select} style={{ border: `2px solid ${getBorderColor()}` }}>
             <option name='coding' value='coding'>Coding</option>
             <option name='writing' value='writing'>Writing</option>

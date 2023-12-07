@@ -1,16 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function ProjectCard({ content, name, id, handleDelete, handleSelect }) {
+function ProjectCard({ category, content, name, id, handleDelete, handleSelect, url }) {
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate(`/projects/${id}/texteditor`, {
-      state: { name, id, content },
+      state: { name, id, content, category },
     });
   };
+
   return (
     <div>
-      <div id="card" onClick={handleNavigate}>
+      <div style={{ border: `2px solid ${category}` }} id="card" onClick={handleNavigate}>
         <h3>{name}</h3>
       </div>
       <button value={id} id="delete" onClick={handleDelete}>

@@ -29,6 +29,20 @@
       "category": "new category",
       "content": "lorum ipsum",
       "id": 5
+    },
+    {
+      "name": "new project",
+      "category": "blue",
+      "content": "lorum ipsum",
+      "catagory": "red",
+      "id": 6
+    },
+    {
+      "name": "new project",
+      "category": "new category",
+      "content": "lorum ipsum",
+      "catagory": "red",
+      "id": 7
     }
   ],
   "sequences": [
@@ -155,6 +169,14 @@
     {
       "id": 10,
       "project_id": 1,
+      "efficiency": null,
+      "duration_seconds": 5,
+      "character_count": 0,
+      "date": "2023-12-07"
+    },
+    {
+      "id": 11,
+      "project_id": 6,
       "efficiency": null,
       "duration_seconds": 5,
       "character_count": 0,

@@ -2,11 +2,13 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 
 function ProjectList({
+  url,
   handleSelect,
   handleDelete,
   addProject,
   showGlobalStats,
   projectList,
+
 }) {
   return (
     <div id="projectList">
@@ -25,6 +27,8 @@ function ProjectList({
       {projectList.map((project) => {
         return (
           <ProjectCard
+            url={url}
+
             handleSelect={handleSelect}
             handleDelete={handleDelete}
             key={project.id}
