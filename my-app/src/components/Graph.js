@@ -5,7 +5,18 @@ import { CategoryScale } from "chart.js";
 Chart.register(CategoryScale);
 
 function Graph({ selectedSequences, selectedProject }) {
-  const [color, setColor] = useState("green");
+  const getRGB = () => {
+    switch (selectedProject.category) {
+      case "red":
+        return "rgb(255, 0, 0, 0.1)";
+      case "blue":
+        return "rgb(50, 50, 255, 0.1)";
+      case "yellow":
+        return "rgb(255, 255, 0, 0.1)";
+      default:
+        return "rgb(255,255,255,0.1)";
+    }
+  };
   return (
     <div id="graph">
       <Line
@@ -23,7 +34,7 @@ function Graph({ selectedSequences, selectedProject }) {
               }),
               fill: true,
               borderWidth: 2,
-              backgroundColor: "rgb(0, 255, 0, 0.1)",
+              backgroundColor: getRGB(),
               borderColor: `${selectedProject.category}`,
               responsive: true,
             },

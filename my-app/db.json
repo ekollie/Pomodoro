@@ -3,25 +3,24 @@
     {
       "id": 1,
       "name": "Journal",
-      "category": "Writing",
       "content": "Again Yesterday I Today I lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum alsdkjflaksdjflksa l;kj;lk asdfa sdfasdfasdf asdfas lkj ;lkjsdf asdfasdfsadfasdfasdfasdf lkj lk lkj l;kjasdf asdfasdf lkj lkj j asdf lkj l;kj asdf jlk lk lkj  lkj lkj l;kj lkjasdf asdf fdsasdf fdsa asdf lkj alkj lkj lkj l;kasdf a;ldskjf asdf lkj lkj lkasdf lkj ;lkajsd flkasdj f;lsakdj f;lksajd f;lasjdk f;lajsdkf asdf  fasdf lkj lkj asd lk asd lkj aslk lkj asdf jlkj ;lkjasd ;l jasd lkj asdf asdf lkj lkj asdf lkj ;lkj sadfasdf fdasdf fdsasd asd lkj asd lkj as asd pizza pizza asd pizza pie ham testinmg fnaiofnbla blacblacbj bla",
-      "conent": "yellow"
+      "category": "white"
     },
     {
       "id": 2,
       "name": "History Paper",
-      "category": "Writing",
+      "category": "blue",
       "content": "Napoleon Bonaparte lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum"
     },
     {
       "id": 3,
       "name": "Weebsite",
-      "category": "Coding",
+      "category": "red",
       "content": "HTML CSS JavaScript lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum"
     },
     {
       "name": "new project",
-      "category": "new category",
+      "category": "white",
       "content": "lorum ipsum",
       "id": 4
     },
@@ -30,6 +29,12 @@
       "category": "red",
       "content": "This is a branch new project",
       "id": 5
+    },
+    {
+      "name": "new project",
+      "category": "white",
+      "content": "lorum ipsum",
+      "id": 6
     }
   ],
   "sequences": [
@@ -139,7 +144,7 @@
     },
     {
       "id": 8,
-      "project_id": 3,
+      "project_id": 1,
       "efficiency": null,
       "duration_seconds": 5,
       "character_count": 0,
@@ -167,22 +172,6 @@
       "efficiency": null,
       "duration_seconds": 5,
       "character_count": 0,
-      "date": "2023-12-07"
-    },
-    {
-      "id": 12,
-      "project_id": 1,
-      "efficiency": null,
-      "duration_seconds": 5,
-      "character_count": 0,
-      "date": "2023-12-07"
-    },
-    {
-      "id": 13,
-      "project_id": 5,
-      "efficiency": 54,
-      "duration_seconds": 5,
-      "character_count": 31,
       "date": "2023-12-07"
     }
   ]
