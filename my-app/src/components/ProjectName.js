@@ -4,9 +4,11 @@ function ProjectName({ selectedProject }) {
   return (
     <div>
       <div id="projectName">
-        <h3>
+        <h1>Pomodoro</h1>
+        <img id="header-logo" src="PomoLogo.png" alt="logo"/>
+        {/* <h3>
           {selectedProject.id < 0 ? "Global Stats" : selectedProject.name}
-        </h3>
+        </h3> */}
       </div>
     </div>
   );

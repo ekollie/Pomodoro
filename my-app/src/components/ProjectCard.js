@@ -1,7 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function ProjectCard({ category, content, name, id, handleDelete, handleSelect, url }) {
+function ProjectCard({
+  content,
+  name,
+  id,
+  handleDelete,
+  handleSelect,
+  category,
+}) {
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate(`/projects/${id}/texteditor`, {
@@ -11,7 +18,11 @@ function ProjectCard({ category, content, name, id, handleDelete, handleSelect, 
 
   return (
     <div>
-      <div style={{ border: `2px solid ${category}` }} id="card" onClick={handleNavigate}>
+      <div
+        style={{ border: `2px solid ${category}` }}
+        id="card"
+        onClick={handleNavigate}
+      >
         <h3>{name}</h3>
       </div>
       <button value={id} id="delete" onClick={handleDelete}>

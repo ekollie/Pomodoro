@@ -79,7 +79,7 @@ function TextEditor({
       body: JSON.stringify({
         name: newName,
         content: editorContent,
-        category: getBorderColor()
+        category: getBorderColor(),
       }),
     }).then((res) => {
       if (res.ok) {
@@ -109,27 +109,26 @@ function TextEditor({
       navigate("/snake");
     }
   }, [isActive, seconds, navigate]);
-  const [select, setSelect] = useState('')
+  const [select, setSelect] = useState("white");
 
   const handleSelectChange = (e) => {
-    e.preventDefault()
-    setSelect(e.target.value)
-    getBorderColor()
-  }
+    e.preventDefault();
+    setSelect(e.target.value);
+    getBorderColor();
+  };
 
   const getBorderColor = () => {
     switch (select) {
-      case 'coding':
-        return 'red';
-      case 'writing':
-        return 'blue';
-      case 'creative':
-        return 'yellow';
+      case "coding":
+        return "red";
+      case "writing":
+        return "blue";
+      case "creative":
+        return "yellow";
       default:
-        return 'white'; // or a default color
+        return "white"; // or a default color
     }
   };
-
   return (
     <div>
       <Timer
@@ -149,13 +148,24 @@ function TextEditor({
       />
       <div>
         <form onSubmit={handleSubmit}>
-          <select id='select' onChange={handleSelectChange} value={select} style={{ border: `2px solid ${getBorderColor()}` }}>
-            <option name='coding' value='coding'>Coding</option>
-            <option name='writing' value='writing'>Writing</option>
-            <option name='creative' value='creative'>Creative</option>
-
+          <select
+            id="select"
+            onChange={handleSelectChange}
+            value={select}
+            style={{ border: `2px solid ${getBorderColor()}` }}
+          >
+            <option name="Select Category">Select Category</option>
+            <option name="coding" value="coding">
+              Coding
+            </option>
+            <option name="writing" value="writing">
+              Writing
+            </option>
+            <option name="creative" value="creative">
+              Creative
+            </option>
           </select>
-          <button id='colorButton'>Confirm</button>
+          <button id="colorButton">Confirm</button>
         </form>
       </div>
       <form onSubmit={handleSubmit}>
@@ -169,7 +179,6 @@ function TextEditor({
           name="project-content"
         ></textarea>
       </form>
-
     </div>
   );
 }

@@ -10,7 +10,10 @@ function Stats({ selectedSequences, selectedProject, projectList, sequences }) {
         selectedSequences={selectedSequences}
         selectedProject={selectedProject}
       />
-      <Graph selectedSequences={selectedSequences} />
+      <Graph
+        selectedSequences={selectedSequences}
+        selectedProject={selectedProject}
+      />
       <AdditionalStats
         selectedSequences={selectedSequences}
         selectedProject={selectedProject}
