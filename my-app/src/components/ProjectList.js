@@ -1,7 +1,5 @@
-import React from "react"
+import React from "react";
 import ProjectCard from "./ProjectCard";
-import TextEditor from "./TextEditor";
-import { useNavigate } from "react-router-dom";
 
 function ProjectList({
   handleSelect,
@@ -13,10 +11,16 @@ function ProjectList({
   return (
     <div id="projectList">
       <div id="listBanner">
-        <img src='./logo192.png' alt='logo' className='App-logo' />
+        <img src="./logo192.png" alt="logo" className="App-logo" />
         <p>Projects</p>
         <button onClick={addProject}>+</button>
-        <img onClick={showGlobalStats} src='Globe.png' alt='globe' height='50px' width='50px' />
+        <img
+          onClick={showGlobalStats}
+          src="Globe.png"
+          alt="globe"
+          height="50px"
+          width="50px"
+        />
       </div>
       {projectList.map((project) => {
         return (
