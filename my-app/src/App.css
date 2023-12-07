@@ -6,6 +6,8 @@
 .App-logo {
   height: 30px;
   pointer-events: none;
+  /* margin: auto; */
+  /* padding-left: 20px; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -23,6 +25,74 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+/*----LOGO CLOCK ANIMATED-----*/
+#clock-container {
+  position: relative;
+  width: 40px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+}
+
+.clock-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+}
+
+.clock-hour-hand {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform-origin: center top;
+  z-index: 2;
+  height: 30px;
+  width: 40px;
+}
+
+.clock-min-hand {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform-origin: center top;
+  height: 40px;
+  width: 40px;
+  z-index: 3;
+}
+
+@keyframes rotateHour {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateMinute {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.clock-hour-hand {
+  animation: rotateHour 10s linear infinite;
+}
+
+.clock-min-hand {
+  animation: rotateMinute 5s linear infinite;
+}
+/*----END LOGO CLOCK ANIMATED---*/
+
+#header-logo {
+  height: 40px;
 }
 
 .App-link {
@@ -62,8 +132,10 @@
   width: 200px;
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
 
   /* Enable vertical scrolling */
 }

@@ -11,16 +11,20 @@ function ProjectList({
   return (
     <div id="projectList">
       <div id="listBanner">
-        <img src="./logo192.png" alt="logo" className="App-logo" />
+        <div id="clock-container">
+          <img src="PomoLogoTomo.png" alt="logo" className="clock-background" />
+          <img src="PomoLogoHour.png" alt="logo" className="clock-hour-hand"/>
+          <img src="PomoLogoMin.png" alt="logo" className="clock-min-hand"/>
+        </div>
         <p>Projects</p>
         <button onClick={addProject}>+</button>
-        <img
+        {/* <img
           onClick={showGlobalStats}
           src="Globe.png"
           alt="globe"
           height="50px"
           width="50px"
-        />
+        /> */}
       </div>
       {projectList.map((project) => {
         return (
