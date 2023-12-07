@@ -23,6 +23,12 @@
       "category": "new category",
       "content": "lorum ipsum",
       "id": 4
+    },
+    {
+      "name": "new project",
+      "category": "new category",
+      "content": "lorum ipsum",
+      "id": 5
     }
   ],
   "sequences": [
@@ -133,6 +139,22 @@
     {
       "id": 8,
       "project_id": 3,
+      "efficiency": null,
+      "duration_seconds": 5,
+      "character_count": 0,
+      "date": "2023-12-07"
+    },
+    {
+      "id": 9,
+      "project_id": 1,
+      "efficiency": null,
+      "duration_seconds": 5,
+      "character_count": 0,
+      "date": "2023-12-07"
+    },
+    {
+      "id": 10,
+      "project_id": 1,
       "efficiency": null,
       "duration_seconds": 5,
       "character_count": 0,

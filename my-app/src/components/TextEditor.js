@@ -108,7 +108,28 @@ function TextEditor({
       navigate("/snake");
     }
   }, [isActive, seconds, navigate]);
+  const [select, setSelect] = useState('')
 
+  const handleSelectChange = (e) => {
+    e.preventDefault()
+    setSelect(e.target.value)
+    getBorderColor()
+  }
+
+  const getBorderColor = () => {
+    switch (select) {
+      case 'coding':
+        return 'red';
+      case 'writing':
+        return 'blue';
+      case 'creative':
+        return 'yellow';
+      default:
+        return 'white'; // or a default color
+    }
+  };
+  const handleSelectSubmission = (e) => {
+  }
   return (
     <div>
       <Timer
@@ -121,12 +142,25 @@ function TextEditor({
       />
       <h3>Project Title:</h3>
       <input
+        style={{ border: `2px solid ${getBorderColor()}` }}
         onChange={handleNameChange}
         id="projectName--editor"
         value={newName}
       />
+      <div>
+        <form type='submit'>
+          <select id='select' onChange={handleSelectChange} value={select} style={{ border: `2px solid ${getBorderColor()}` }}>
+            <option name='coding' value='coding'>Coding</option>
+            <option name='writing' value='writing'>Writing</option>
+            <option name='creative' value='creative'>Creative</option>
+
+          </select>
+          <button id='colorButton'>Confirm</button>
+        </form>
+      </div>
       <form onSubmit={handleSubmit}>
         <textarea
+          style={{ border: `2px solid ${getBorderColor()}` }}
           value={editorContent}
           onChange={handleChange}
           rows="30"
@@ -135,6 +169,7 @@ function TextEditor({
           name="project-content"
         ></textarea>
       </form>
+
     </div>
   );
 }
