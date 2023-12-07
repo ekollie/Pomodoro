@@ -37,14 +37,7 @@ const Snake = () => {
         break;
     }
   };
-
-  const startGame = () => {
-    setSnake([{ row: 0, col: 0 }]);
-    setFood(getRandomFoodPosition());
-    setDirection("RIGHT");
-    setGameOver(false);
-    setIsGameRunning(true);
-
+  useEffect(() => {
     const intervalId = setInterval(() => {
       setTimer((prevTimer) => {
         if (prevTimer === 1) {
@@ -55,6 +48,18 @@ const Snake = () => {
         return prevTimer - 1;
       });
     }, 1000); // Update the timer every second
+
+    return () => clearInterval(intervalId);
+  }, [navigate]);
+  const startGame = () => {
+    setSnake([{ row: 0, col: 0 }]);
+    setFood(getRandomFoodPosition());
+    setDirection("RIGHT");
+    setGameOver(false);
+    setIsGameRunning(true);
+
+
+
   };
 
   const moveSnake = () => {
@@ -141,7 +146,7 @@ const Snake = () => {
         </div>
       )}
       {!isGameRunning && (
-        <button id="startButton" onClick={startGame}>
+        <button id="startButton" onClick={startGame} >
           Start Game
         </button>
       )}
@@ -170,8 +175,8 @@ const Snake = () => {
                 backgroundColor: isSnakeSegment
                   ? "green"
                   : isFood
-                  ? "red"
-                  : "white",
+                    ? "red"
+                    : "white",
                 border: "1px solid black",
               }}
             />

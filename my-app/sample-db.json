@@ -21,8 +21,20 @@
     {
       "name": "This is a project",
       "category": "new category",
-      "content": "lorum ipsum",
+      "content": "Hi dkndkndknedknlednkndelkdendeklndlkndelnldk ndk3ndknkdnkndeldqnlkdneklndkndkleenkfnklnkfnkfnrkfnrqklrnqfkrnknrflnfkkfnknfrklefklnklfksckcs",
       "id": 4
+    },
+    {
+      "name": "new project",
+      "category": "new category",
+      "content": "This is a brand new project hellow wo",
+      "id": 5
+    },
+    {
+      "name": "new project",
+      "category": "new category",
+      "content": "lorum ipsum",
+      "id": 6
     }
   ],
   "sequences": [
@@ -135,7 +147,39 @@
       "project_id": 4,
       "efficiency": null,
       "duration_seconds": 5,
-      "character_count": 0,
+      "character_count": 35,
+      "date": "2023-12-06"
+    },
+    {
+      "id": 11,
+      "project_id": 5,
+      "efficiency": 0,
+      "duration_seconds": 5,
+      "character_count": 38,
+      "date": "2023-12-06"
+    },
+    {
+      "id": 12,
+      "project_id": 4,
+      "efficiency": 0,
+      "duration_seconds": 5,
+      "character_count": 45,
+      "date": "2023-12-07"
+    },
+    {
+      "id": 13,
+      "project_id": 4,
+      "efficiency": 0,
+      "duration_seconds": 5,
+      "character_count": 34,
+      "date": "2023-12-07"
+    },
+    {
+      "id": 14,
+      "project_id": 4,
+      "efficiency": 0,
+      "duration_seconds": 5,
+      "character_count": 61,
       "date": "2023-12-07"
     }
   ]
