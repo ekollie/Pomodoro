@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import TotalTime from "./TotalTime";
 import Graph from "./Graph";
 import AdditionalStats from "./AdditionalStats";

@@ -19,7 +19,7 @@
       "content": "HTML CSS JavaScript lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum"
     },
     {
-      "name": "new project",
+      "name": "This is a project",
       "category": "new category",
       "content": "Hi dkndkndknedknlednkndelkdendeklndlkndelnldk ndk3ndknkdnkndeldqnlkdneklndkndkleenkfnklnkfnkfnrkfnrqklrnqfkrnknrflnfkkfnknfrklefklnklfksckcs",
       "id": 4
@@ -144,24 +144,8 @@
     },
     {
       "id": 8,
-      "project_id": 1,
-      "efficiency": 0,
-      "duration_seconds": 1500,
-      "character_count": 16,
-      "date": "2023-12-6"
-    },
-    {
-      "id": 9,
-      "project_id": 1,
-      "efficiency": 0,
-      "duration_seconds": 1500,
-      "character_count": 18,
-      "date": "2023-12-6"
-    },
-    {
-      "id": 10,
-      "project_id": 1,
-      "efficiency": 0,
+      "project_id": 4,
+      "efficiency": null,
       "duration_seconds": 5,
       "character_count": 35,
       "date": "2023-12-06"

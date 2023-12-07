@@ -10,18 +10,20 @@ function TextEditor({
   setSeconds,
   initialTime,
 }) {
+  const navigate = useNavigate();
+  const { state } = useLocation();
+
+  const { id, content, name } = state;
   const [editorContent, setEditorContent] = useState("");
-  const [charCount, setCharCount] = useState(0);
-  const [totalChars, setTotalChars] = useState(0);
+  const [keyCount, setKeyCount] = useState(0);
+  const [totalCharLength, setTotalCharLength] = useState(0);
   const [efficiency, setEfficiency] = useState(0);
+  const [startingCharLength, setStartingCharLength] = useState(0);
+  const [newName, setNewName] = useState(name);
   const projUrl = "http://localhost:3001/projects";
   const seqUrl = "http://localhost:3001/sequences";
 
-  const navigate = useNavigate();
-
-  const { state } = useLocation();
-  const { id, content, name } = state;
-  console.log(new Date().toISOString().split("T")[0]);
+  // console.log(new Date().toISOString().split("T")[0]);
 
   useState(() => {
     fetch(projUrl)
@@ -30,19 +32,32 @@ function TextEditor({
         let currProject = projects.find((project) => {
           return project.id === id;
         });
-        return setEditorContent(currProject.content);
+        setEditorContent(currProject.content);
+        setStartingCharLength(currProject.content.length);
+        console.log(currProject.content.length);
       });
   }, []);
 
   function handleSubmit() {
     /*POST REQUEST FOR A SEQUENCE + PATCH REQUEST FOR CONTENT UPDATE*/
-    setCharCount((prevCount) => prevCount + 1);
+    setKeyCount((prevCount) => prevCount + 1);
+    setTotalCharLength(editorContent.length);
+
+    const currentTotalCharLength = editorContent.length - startingCharLength;
+    /*we may need to add an if statement here - tyler tested a few use cases that bugged*/
+    const currentEfficiency = Math.floor(
+      (currentTotalCharLength / keyCount) * 100
+    );
+    setEfficiency(currentEfficiency);
+
+    console.log(currentTotalCharLength);
+
     const newSequence = {
       id: "",
       project_id: id,
-      efficiency: efficiency,
+      efficiency: currentEfficiency,
       duration_seconds: initialTime,
-      character_count: charCount,
+      character_count: keyCount,
       date: new Date().toISOString().split("T")[0],
     };
     fetch(seqUrl, {
@@ -61,7 +76,10 @@ function TextEditor({
     fetch(`${projUrl}/${id}`, {
       method: "PATCH",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ content: editorContent }),
+      body: JSON.stringify({
+        name: newName,
+        content: editorContent,
+      }),
     }).then((res) => {
       if (res.ok) {
         console.log(res);
@@ -75,10 +93,13 @@ function TextEditor({
     event.preventDefault();
     setIsActive(true);
     setEditorContent(event.target.value); /*keep*/
-    setCharCount((prevCount) => prevCount + 1);
+    setKeyCount((prevCount) => prevCount + 1);
     // keep for sequence
-    // setEfficiency((totalChars / charCount) * 100)
-    // setTotalChars(event.target.value.length)
+    //
+  }
+
+  function handleNameChange(e) {
+    setNewName(e.target.value);
   }
 
   useEffect(() => {
@@ -98,7 +119,12 @@ function TextEditor({
         setSeconds={setSeconds}
         initialTime={initialTime}
       />
-      <h1>{name}</h1>
+      <h3>Project Title:</h3>
+      <input
+        onChange={handleNameChange}
+        id="projectName--editor"
+        value={newName}
+      />
       <form onSubmit={handleSubmit}>
         <textarea
           value={editorContent}
