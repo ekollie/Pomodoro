@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 const numRows = 10;
 const numCols = 10;
 
@@ -11,6 +11,8 @@ const Snake = () => {
   };
 
   const navigate = useNavigate();
+  const { state } = useLocation();
+  const { id } = state;
 
   const [snake, setSnake] = useState([{ row: 0, col: 0 }]);
   const [food, setFood] = useState(getRandomFoodPosition());
@@ -57,9 +59,6 @@ const Snake = () => {
     setDirection("RIGHT");
     setGameOver(false);
     setIsGameRunning(true);
-
-
-
   };
 
   const moveSnake = () => {
@@ -146,7 +145,7 @@ const Snake = () => {
         </div>
       )}
       {!isGameRunning && (
-        <button id="startButton" onClick={startGame} >
+        <button id="startButton" onClick={startGame}>
           Start Game
         </button>
       )}
@@ -175,8 +174,8 @@ const Snake = () => {
                 backgroundColor: isSnakeSegment
                   ? "green"
                   : isFood
-                    ? "red"
-                    : "white",
+                  ? "red"
+                  : "white",
                 border: "1px solid black",
               }}
             />
@@ -184,6 +183,7 @@ const Snake = () => {
         })}
       </div>
       <NavLink to="/">Back to Home</NavLink>
+      {/* <NavLink to={`/projects/${id}/texteditor`}> Back to project </NavLink> */}
     </div>
   );
 };

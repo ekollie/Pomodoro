@@ -51,7 +51,7 @@ function MainPage() {
   const [selectedProject, setSelectedProject] = useState({
     id: -1,
     name: "Loading name",
-    category: "Loading Category",
+    category: "white",
     content: "Loading Content",
   });
 

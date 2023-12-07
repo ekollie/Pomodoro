@@ -19,7 +19,7 @@ function ProjectCard({
   return (
     <div>
       <div
-        style={{ border: `2px solid ${category}` }}
+        style={{ boxShadow: `0px 1px 5px ${category}, 1px 0px 12px red` }}
         id="card"
         onClick={handleNavigate}
       >

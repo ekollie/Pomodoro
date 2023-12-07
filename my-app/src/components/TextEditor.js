@@ -45,9 +45,8 @@ function TextEditor({
 
     const currentTotalCharLength = editorContent.length - startingCharLength;
     /*we may need to add an if statement here - tyler tested a few use cases that bugged*/
-    const currentEfficiency = Math.floor(
-      (currentTotalCharLength / keyCount) * 100
-    );
+    const currentEfficiency =
+      0 + Math.floor((currentTotalCharLength / keyCount) * 100);
     setEfficiency(currentEfficiency);
 
     console.log(currentTotalCharLength);
@@ -103,10 +102,16 @@ function TextEditor({
     setNewName(e.target.value);
   }
 
+  function handleNavigate() {
+    navigate("/snake", {
+      state: { id },
+    });
+  }
+
   useEffect(() => {
     if (isActive && seconds === 0) {
       handleSubmit();
-      navigate("/snake");
+      handleNavigate();
     }
   }, [isActive, seconds, navigate]);
   const [select, setSelect] = useState("white");
