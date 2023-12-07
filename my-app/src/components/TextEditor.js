@@ -120,8 +120,7 @@ function TextEditor({
         initialTime={initialTime}
       />
       <form onSubmit={handleSubmit}>
-        <h3>Project Title:</h3>
-        <input onChange={handleNameChange} id="projectName" value={newName} />
+        <input id="projectName--editor" value={name} />
         <textarea
           value={editorContent}
           onChange={handleChange}
