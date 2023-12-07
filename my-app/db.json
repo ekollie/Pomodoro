@@ -10,8 +10,8 @@
     {
       "id": 2,
       "name": "History Paper",
-      "category": "Writing",
-      "content": "Napoleon Bonaparte lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum"
+      "category": "blue",
+      "content": "Napoleon Bonaparte lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispumhbvhbhbhbbjbjbbbhbjbknnjknjnnjnjnnjnjnjnjnjknkknjnjknknkknjnjnnjj"
     },
     {
       "id": 3,
@@ -27,13 +27,13 @@
     },
     {
       "name": "This is a brand new project",
-      "category": "red",
-      "content": "This is a branch new project",
+      "category": "blue",
+      "content": "This is a branch new projectdwj dwejknd3ndnkdnqedwj dej dw",
       "id": 5
     },
     {
       "name": "new project",
-      "category": "blue",
+      "category": "red",
       "content": "lorum ipsum",
       "catagory": "red",
       "id": 6
@@ -196,6 +196,46 @@
       "efficiency": 54,
       "duration_seconds": 5,
       "character_count": 31,
+      "date": "2023-12-07"
+    },
+    {
+      "id": 14,
+      "project_id": 6,
+      "efficiency": null,
+      "duration_seconds": 5,
+      "character_count": 0,
+      "date": "2023-12-07"
+    },
+    {
+      "id": 15,
+      "project_id": 5,
+      "efficiency": 100,
+      "duration_seconds": 5,
+      "character_count": 19,
+      "date": "2023-12-07"
+    },
+    {
+      "id": 16,
+      "project_id": 5,
+      "efficiency": 100,
+      "duration_seconds": 5,
+      "character_count": 11,
+      "date": "2023-12-07"
+    },
+    {
+      "id": 17,
+      "project_id": 2,
+      "efficiency": 100,
+      "duration_seconds": 5,
+      "character_count": 20,
+      "date": "2023-12-07"
+    },
+    {
+      "id": 18,
+      "project_id": 2,
+      "efficiency": 100,
+      "duration_seconds": 5,
+      "character_count": 45,
       "date": "2023-12-07"
     }
   ]
