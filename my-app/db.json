@@ -1,19 +1,142 @@
 {
-  "posts": [
+  "projects": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Journal",
+      "category": "Writing",
+      "content": "Again Yesterday I Today I lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum alsdkjflaksdjflksa l;kj;lk asdfa sdfasdfasdf asdfas lkj ;lkjsdf asdfasdfsadfasdfasdfasdf lkj lk lkj l;kjasdf asdfasdf lkj lkj j asdf lkj l;kj asdf jlk lk lkj  lkj lkj l;kj lkjasdf asdf fdsasdf fdsa asdf lkj alkj lkj lkj l;kasdf a;ldskjf asdf lkj lkj lkasdf lkj ;lkajsd flkasdj f;lsakdj f;lksajd f;lasjdk f;lajsdkf asdf  fasdf lkj lkj asd lk asd lkj aslk lkj asdf jlkj ;lkjasd ;l jasd lkj asdf asdf lkj lkj asdf lkj ;lkj sadfasdf fdasdf fdsasd asd lkj asd lkj as asd pizza pizza asd pizza pie ham testinmg fnaiofnbla blacblacbj bla"
+    },
+    {
+      "id": 2,
+      "name": "History Paper",
+      "category": "Writing",
+      "content": "Napoleon Bonaparte lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum"
+    },
+    {
+      "id": 3,
+      "name": "Weebsite",
+      "category": "Coding",
+      "content": "HTML CSS JavaScript lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum"
+    },
+    {
+      "name": "new project",
+      "category": "new category",
+      "content": "lorum ipsum",
+      "id": 4
     }
   ],
-  "comments": [
+  "sequences": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "project_id": 1,
+      "efficiency": 20,
+      "duration_seconds": 50,
+      "chararcter_count": 0,
+      "date": "2023-12-6"
+    },
+    {
+      "id": 2,
+      "project_id": 2,
+      "efficiency": 100,
+      "duration_seconds": 50,
+      "chararcter_count": 0,
+      "date": "2023-12-7"
+    },
+    {
+      "id": 3,
+      "project_id": 2,
+      "efficiency": 67,
+      "duration_seconds": 50,
+      "date": "2023-12-8",
+      "chararcter_count": 0
+    },
+    {
+      "id": 4,
+      "project_id": 3,
+      "efficiency": 84,
+      "duration_seconds": 50,
+      "chararcter_count": 0,
+      "date": "2023-12-9"
+    },
+    {
+      "id": 5,
+      "project_id": 1,
+      "efficiency": 49,
+      "duration_seconds": 50,
+      "chararcter_count": 0,
+      "date": "2023-12-10"
+    },
+    {
+      "id": 6,
+      "project_id": 2,
+      "efficiency": 99,
+      "duration_seconds": 50,
+      "chararcter_count": 0,
+      "date": "2023-12-11"
+    },
+    {
+      "id": 1,
+      "project_id": 3,
+      "efficiency": 20,
+      "duration_seconds": 50,
+      "chararcter_count": 0,
+      "date": "2023-12-12"
+    },
+    {
+      "id": 2,
+      "project_id": 1,
+      "efficiency": 100,
+      "duration_seconds": 50,
+      "chararcter_count": 0,
+      "date": "2023-12-13"
+    },
+    {
+      "id": 3,
+      "project_id": 2,
+      "efficiency": 67,
+      "duration_seconds": 50,
+      "date": "2023-12-14",
+      "chararcter_count": 0
+    },
+    {
+      "id": 4,
+      "project_id": 3,
+      "efficiency": 84,
+      "duration_seconds": 50,
+      "chararcter_count": 0,
+      "date": "2023-12-15"
+    },
+    {
+      "id": 5,
+      "project_id": 1,
+      "efficiency": 49,
+      "duration_seconds": 50,
+      "chararcter_count": 0,
+      "date": "2023-12-16"
+    },
+    {
+      "id": 6,
+      "project_id": 2,
+      "efficiency": 99,
+      "duration_seconds": 50,
+      "chararcter_count": 0,
+      "date": "2023-12-17"
+    },
+    {
+      "id": 7,
+      "project_id": 1,
+      "efficiency": 0,
+      "duration_seconds": 1500,
+      "character_count": 6,
+      "date": "2023-12-6"
+    },
+    {
+      "id": 8,
+      "project_id": 3,
+      "efficiency": null,
+      "duration_seconds": 5,
+      "character_count": 0,
+      "date": "2023-12-07"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

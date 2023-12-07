@@ -77,8 +77,8 @@ function TextEditor({
       method: "PATCH",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
-        content: editorContent,
         name: newName,
+        content: editorContent,
       }),
     }).then((res) => {
       if (res.ok) {
