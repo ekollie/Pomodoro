@@ -14,7 +14,7 @@ function TextEditor({
   const [keyCount, setKeyCount] = useState(0);
   const [totalCharLength, setTotalCharLength] = useState(0);
   const [efficiency, setEfficiency] = useState(0);
-  const [startingCharLength, setStartingCharLength] = useState(0)
+  const [startingCharLength, setStartingCharLength] = useState(0);
   const projUrl = "http://localhost:3001/projects";
   const seqUrl = "http://localhost:3001/sequences";
 
@@ -31,23 +31,25 @@ function TextEditor({
         let currProject = projects.find((project) => {
           return project.id === id;
         });
-          setEditorContent(currProject.content);
-          setStartingCharLength(currProject.content.length)
-          console.log(currProject.content.length)
+        setEditorContent(currProject.content);
+        setStartingCharLength(currProject.content.length);
+        console.log(currProject.content.length);
       });
   }, []);
 
   function handleSubmit() {
     /*POST REQUEST FOR A SEQUENCE + PATCH REQUEST FOR CONTENT UPDATE*/
     setKeyCount((prevCount) => prevCount + 1);
-    setTotalCharLength(editorContent.length)
+    setTotalCharLength(editorContent.length);
 
-    const currentTotalCharLength = (editorContent.length - startingCharLength)
+    const currentTotalCharLength = editorContent.length - startingCharLength;
     /*we may need to add an if statement here - tyler tested a few use cases that bugged*/
-    const currentEfficiency = Math.floor((currentTotalCharLength/keyCount) * 100)
-    setEfficiency(currentEfficiency)
+    const currentEfficiency = Math.floor(
+      (currentTotalCharLength / keyCount) * 100
+    );
+    setEfficiency(currentEfficiency);
 
-    console.log(currentTotalCharLength)
+    console.log(currentTotalCharLength);
 
     const newSequence = {
       id: "",
@@ -89,7 +91,7 @@ function TextEditor({
     setEditorContent(event.target.value); /*keep*/
     setKeyCount((prevCount) => prevCount + 1);
     // keep for sequence
-    // 
+    //
   }
 
   useEffect(() => {
@@ -109,8 +111,8 @@ function TextEditor({
         setSeconds={setSeconds}
         initialTime={initialTime}
       />
-      <h1>{name}</h1>
       <form onSubmit={handleSubmit}>
+        <input id="projectName" value={name} />
         <textarea
           value={editorContent}
           onChange={handleChange}
