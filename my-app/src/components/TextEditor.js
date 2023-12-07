@@ -10,18 +10,19 @@ function TextEditor({
   setSeconds,
   initialTime,
 }) {
+  const navigate = useNavigate();
+  const { state } = useLocation();
+
+  const { id, content, name } = state;
   const [editorContent, setEditorContent] = useState("");
   const [keyCount, setKeyCount] = useState(0);
   const [totalCharLength, setTotalCharLength] = useState(0);
   const [efficiency, setEfficiency] = useState(0);
   const [startingCharLength, setStartingCharLength] = useState(0);
+  const [newName, setNewName] = useState(name);
   const projUrl = "http://localhost:3001/projects";
   const seqUrl = "http://localhost:3001/sequences";
 
-  const navigate = useNavigate();
-
-  const { state } = useLocation();
-  const { id, content, name } = state;
   // console.log(new Date().toISOString().split("T")[0]);
 
   useState(() => {
@@ -75,7 +76,10 @@ function TextEditor({
     fetch(`${projUrl}/${id}`, {
       method: "PATCH",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ content: editorContent }),
+      body: JSON.stringify({
+        content: editorContent,
+        name: newName,
+      }),
     }).then((res) => {
       if (res.ok) {
         console.log(res);
@@ -92,6 +96,10 @@ function TextEditor({
     setKeyCount((prevCount) => prevCount + 1);
     // keep for sequence
     //
+  }
+
+  function handleNameChange(e) {
+    setNewName(e.target.value);
   }
 
   useEffect(() => {
@@ -112,7 +120,7 @@ function TextEditor({
         initialTime={initialTime}
       />
       <form onSubmit={handleSubmit}>
-        <input id="projectName" value={name} />
+        <input onChange={handleNameChange} id="projectName" value={newName} />
         <textarea
           value={editorContent}
           onChange={handleChange}
