@@ -43,6 +43,7 @@ function TextEditor({
     setTotalCharLength(editorContent.length)
 
     const currentTotalCharLength = (editorContent.length - startingCharLength)
+    /*we may need to add an if statement here - tyler tested a few use cases that bugged*/
     const currentEfficiency = Math.floor((currentTotalCharLength/keyCount) * 100)
     setEfficiency(currentEfficiency)
 
