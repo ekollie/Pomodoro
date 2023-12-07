@@ -4,9 +4,9 @@ function ProjectName({ selectedProject }) {
   return (
     <div>
       <div id="projectName">
-        <h1>
+        <h3>
           {selectedProject.id < 0 ? "Global Stats" : selectedProject.name}
-        </h1>
+        </h3>
       </div>
     </div>
   );
