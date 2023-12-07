@@ -62,8 +62,9 @@ function MainPage() {
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         name: "new project",
-        category: "new category",
+
         content: "lorum ipsum",
+        category: 'white'
       }),
     })
       .then((res) => res.json())
@@ -155,6 +156,7 @@ function MainPage() {
       <div id="container">
         <ProjectName selectedProject={selectedProject} />
         <ProjectList
+          url={url}
           projectList={projectList}
           handleSelect={handleSelect}
           handleDelete={handleDelete}

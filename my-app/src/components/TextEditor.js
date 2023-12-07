@@ -13,7 +13,7 @@ function TextEditor({
   const navigate = useNavigate();
   const { state } = useLocation();
 
-  const { id, content, name } = state;
+  const { category, id, content, name } = state;
   const [editorContent, setEditorContent] = useState("");
   const [keyCount, setKeyCount] = useState(0);
   const [totalCharLength, setTotalCharLength] = useState(0);

@@ -12,9 +12,10 @@ function ProjectCard({
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate(`/projects/${id}/texteditor`, {
-      state: { name, id, content },
+      state: { name, id, content, category },
     });
   };
+
   return (
     <div>
       <div
