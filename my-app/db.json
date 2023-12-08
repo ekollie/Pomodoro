@@ -26,16 +26,9 @@
     },
     {
       "name": "This is a brand new project",
-      "category": "blue",
-      "content": "This is a branch new projectdwj dwejknd3ndnkdnqedwj dej dw",
+      "category": "white",
+      "content": "This is a branch new projectdwj dwejknd3ndnkdnqedwj dej dw. mcfmrmc3fc3t3rn k3nktnk3n kf",
       "id": 5
-    },
-    {
-      "name": "new project",
-      "category": "red",
-      "content": "lorum ipsum",
-      "catagory": "red",
-      "id": 6
     },
     {
       "name": "This is a brand new project",
@@ -154,6 +147,22 @@
       "duration_seconds": 1500,
       "character_count": 6,
       "date": "2023-12-6"
+    },
+    {
+      "id": 8,
+      "project_id": 5,
+      "efficiency": null,
+      "duration_seconds": 5,
+      "character_count": 0,
+      "date": "2023-12-07"
+    },
+    {
+      "id": 9,
+      "project_id": 5,
+      "efficiency": 100,
+      "duration_seconds": 5,
+      "character_count": 30,
+      "date": "2023-12-07"
     }
   ]
 }
