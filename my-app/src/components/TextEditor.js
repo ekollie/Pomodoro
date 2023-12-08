@@ -78,7 +78,7 @@ function TextEditor({
       body: JSON.stringify({
         name: newName,
         content: editorContent,
-        category: getBorderColor(),
+        category: select,
       }),
     }).then((res) => {
       if (res.ok) {
