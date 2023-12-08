@@ -45,9 +45,9 @@ function TextEditor({
 
     const currentTotalCharLength = editorContent.length - startingCharLength;
     /*we may need to add an if statement here - tyler tested a few use cases that bugged*/
-    const currentEfficiency =
-      0 + Math.floor((currentTotalCharLength / keyCount) * 100);
-    setEfficiency(currentEfficiency);
+    const currentEfficiency = Math.floor(
+      (currentTotalCharLength / keyCount) * 100
+    );
 
     console.log(currentTotalCharLength);
 
@@ -136,28 +136,45 @@ function TextEditor({
   };
   return (
     <div>
-      <Timer
-        isActive={isActive}
-        setIsActive={setIsActive}
-        onExpiration={handleSubmit}
-        seconds={seconds}
-        setSeconds={setSeconds}
-        initialTime={initialTime}
-      />
-      <h3>Project Title:</h3>
-      <input
-        style={{ border: `2px solid ${getBorderColor()}` }}
-        onChange={handleNameChange}
-        id="projectName--editor"
-        value={newName}
-      />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          marginBottom: "2px",
+        }}
+      >
+        <div>
+          <h3>Project Title:</h3>
+          <input
+            style={{
+              border: `2px solid ${getBorderColor()}`,
+              marginBottom: "5px",
+            }}
+            onChange={handleNameChange}
+            id="projectName--editor"
+            value={newName}
+          />
+        </div>
+        <Timer
+          isActive={isActive}
+          setIsActive={setIsActive}
+          onExpiration={handleSubmit}
+          seconds={seconds}
+          setSeconds={setSeconds}
+          initialTime={initialTime}
+        />
+      </div>
       <div>
         <form onSubmit={handleSubmit}>
           <select
             id="select"
             onChange={handleSelectChange}
             value={select}
-            style={{ border: `2px solid ${getBorderColor()}` }}
+            style={{
+              border: `2px solid ${getBorderColor()}`,
+              marginBottom: "1px",
+            }}
           >
             <option name="Select Category">Select Category</option>
             <option name="coding" value="coding">
@@ -170,16 +187,14 @@ function TextEditor({
               Creative
             </option>
           </select>
-          <button id="colorButton">Confirm</button>
         </form>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{ width: "100%" }}>
         <textarea
-          style={{ border: `2px solid ${getBorderColor()}` }}
+          style={{ border: `2px solid ${getBorderColor()}`, width: "90%" }}
           value={editorContent}
           onChange={handleChange}
-          rows="30"
-          cols="90"
+          rows="40"
           id="project-content"
           name="project-content"
         ></textarea>

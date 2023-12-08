@@ -8,15 +8,16 @@ function Graph({ selectedSequences, selectedProject }) {
   const getRGB = () => {
     switch (selectedProject.category) {
       case "red":
-        return "rgb(255, 0, 0, 0.1)";
+        return "rgb(222, 65, 64, 0.1)";
       case "blue":
-        return "rgb(50, 50, 255, 0.1)";
+        return "rgb(0, 171, 240, 0.1)";
       case "yellow":
         return "rgb(255, 255, 0, 0.1)";
       default:
         return "rgb(255,255,255,0.1)";
     }
   };
+
   return (
     <div id="graph">
       <Line
@@ -39,6 +40,10 @@ function Graph({ selectedSequences, selectedProject }) {
               responsive: true,
             },
           ],
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+          },
         }}
       />
     </div>

@@ -8,13 +8,13 @@ function TotalTime({ selectedSequences, selectedProject }) {
   };
   return (
     <div>
-      {/* <h1>{selectedProject.id < 0 ? "Global Stats" : selectedProject.name}</h1> */}
+      <h1>{selectedProject.id < 0 ? "Global Stats" : selectedProject.name}</h1>
       <h2>
         {Math.floor(getTotalTime() / 60)}:
         {getTotalTime() % 60 < 10
           ? "0" + (getTotalTime() % 60)
           : getTotalTime() % 60}{" "}
-        minutes total
+        minutes in total
       </h2>
     </div>
   );
