@@ -3,44 +3,20 @@
     {
       "id": 1,
       "name": "Journal",
-      "content": "Again Yesterday I Today I lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum alsdkjflaksdjflksa l;kj;lk asdfa sdfasdfasdf asdfas lkj ;lkjsdf asdfasdfsadfasdfasdfasdf lkj lk lkj l;kjasdf asdfasdf lkj lkj j asdf lkj l;kj asdf jlk lk lkj  lkj lkj l;kj lkjasdf asdf fdsasdf fdsa asdf lkj alkj lkj lkj l;kasdf a;ldskjf asdf lkj lkj lkasdf lkj ;lkajsd flkasdj f;lsakdj f;lksajd f;lasjdk f;lajsdkf asdf  fasdf lkj lkj asd lk asd lkj aslk lkj asdf jlkj ;lkjasd ;l jasd lkj asdf asdf lkj lkj asdf lkj ;lkj sadfasdf fdasdf fdsasd asd lkj asd lkj as asd pizza pizza asd pizza pie ham testinmg fnaiofnbla blacblacbj bla",
-      "category": "white"
+      "content": "Today has been quite a reflective day. I found myself revisiting the memories of yesterday, contemplating the intricacies of life. The journey of self-discovery continues, and with each passing moment, I am reminded of the importance of embracing change. As I delved into coding, my mind danced with ideas, and lines of code became a canvas for my creativity. The challenges were aplenty, but overcoming them brought a sense of accomplishment. The intricacies of web development revealed themselves, and I marveled at the beauty of creating something functional and visually appealing. In the realm of writing, I embarked on a journey through history. The tale of Napoleon Bonaparte unfolded before me, and I couldn't help but be captivated by the twists and turns of his life. The written words became a gateway to a different era, and I found solace in the exploration of narratives. The creative pursuit of designing a website allowed me to express myself through HTML, CSS, and JavaScript. Each line of code added a layer of personality to the digital canvas. It's fascinating how a combination of elements can give life to a virtual space. Reflecting on these experiences, I acknowledge the significance of each project. They are not merely coding exercises or writing assignments; they are expressions of my thoughts, passions, and creativity. As the clock ticks away, I find myself immersed in the world of pixels and characters, weaving a tapestry of ideas and expressions. The journey continues, and I eagerly anticipate the chapters that await in the coming days. Pizza and a warm cup of tea accompany me in this creative venture, providing sustenance to both body and mind. Here's to the joy of coding, the art of writing, and the boundless creativity that fuels the journey of self-discovery.",
+      "category": "coding"
     },
     {
       "id": 2,
       "name": "History Paper",
-      "category": "blue",
-      "content": "Napoleon Bonaparte lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum"
+      "category": "writing",
+      "content": "The historical journey continued today, leading me through the annals of time. As I delved into the life of Napoleon Bonaparte, the pages of history came alive with tales of ambition, triumphs, and defeats. Napoleon, a towering figure in the tapestry of European history, left an indelible mark on the world. His military prowess, strategic brilliance, and complex personality make him a fascinating subject of study. The canvas of my writing became a battlefield, where words and sentences waged a literary war to capture the essence of Napoleon's era. The ink on the pages seemed to echo the cannon fire of distant battles, and the quill danced with the rhythm of historical narratives. I found myself engrossed in the challenge of encapsulating the grandeur and complexity of historical events within the confines of written expression. The meticulous research and exploration of primary sources added layers of authenticity to my narrative. Each word became a brushstroke, painting a vivid picture of a bygone era. As I penned down the triumphs and tribulations of Napoleon, I couldn't help but feel a sense of connection with the past. Writing, in its essence, is a time-traveling endeavor, bridging the gap between centuries and allowing us to walk in the footsteps of those who came before us. The journey of unraveling history is not merely an academic pursuit; it's a voyage of understanding, empathy, and appreciation for the human experience. In the quiet hours of reflection, surrounded by the whispers of history, I continue to traverse the corridors of time, seeking to capture the essence of moments long gone."
     },
     {
       "id": 3,
-      "name": "Weebsite",
-      "category": "red",
-      "content": "HTML CSS JavaScript lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum"
-    },
-    {
-      "name": "new project",
-      "category": "white",
-      "content": "lorum ipsum",
-      "id": 4
-    },
-    {
-      "name": "This is a brand new project",
-      "category": "white",
-      "content": "This is a branch new projectdwj dwejknd3ndnkdnqedwj dej dw. mcfmrmc3fc3t3rn k3nktnk3n kf",
-      "id": 5
-    },
-    {
-      "name": "This is a brand new project",
-      "category": "red",
-      "content": "This is a branch new project",
-      "id": 5
-    },
-    {
-      "name": "new project",
-      "category": "white",
-      "content": "lorum ipsum",
-      "id": 6
+      "name": "Website",
+      "category": "creative",
+      "content": "Embarking on a digital odyssey, I set out to create a virtual realm where imagination meets technology. HTML, CSS, and JavaScript became my companions on this creative journey. The canvas of the web page stretched before me, a blank slate awaiting the strokes of innovation and design. With HTML as the architectural foundation, I laid the structural groundwork, defining the skeleton of my digital creation. CSS, the artist's palette, allowed me to infuse color, style, and personality into every element. The cascading styles echoed the harmony of aesthetics and functionality, transforming a simple layout into a visually captivating experience. JavaScript, the maestro orchestrating interactivity, brought my website to life. Dynamic elements danced across the screen, responding to user input with seamless transitions and engaging animations. The code, akin to a composer's score, harmonized the symphony of user experience. As I delved deeper into the intricacies of responsive design, the website evolved to adapt gracefully to various devices and screen sizes. The journey was not without its challenges—a browser compatibility puzzle, a debugging maze—but overcoming each obstacle added layers of resilience to my coding narrative. With every line of code, the website became a testament to creativity, perseverance, and the limitless possibilities of the digital realm. In the realm of web development, the journey is as enriching as the destination. With the virtual curtains drawn, my website awaits its audience, inviting them to explore the boundless landscape of imagination and innovation."
     }
   ],
   "sequences": [
@@ -49,96 +25,48 @@
       "project_id": 1,
       "efficiency": 20,
       "duration_seconds": 50,
-      "chararcter_count": 0,
-      "date": "2023-12-6"
+      "character_count": 150,
+      "date": "2023-12-01"
     },
     {
       "id": 2,
       "project_id": 2,
       "efficiency": 100,
       "duration_seconds": 50,
-      "chararcter_count": 0,
-      "date": "2023-12-7"
+      "character_count": 200,
+      "date": "2023-12-02"
     },
     {
       "id": 3,
       "project_id": 2,
       "efficiency": 67,
       "duration_seconds": 50,
-      "date": "2023-12-8",
-      "chararcter_count": 0
+      "character_count": 180,
+      "date": "2023-12-03"
     },
     {
       "id": 4,
       "project_id": 3,
       "efficiency": 84,
       "duration_seconds": 50,
-      "chararcter_count": 0,
-      "date": "2023-12-9"
+      "character_count": 220,
+      "date": "2023-12-04"
     },
     {
       "id": 5,
       "project_id": 1,
       "efficiency": 49,
       "duration_seconds": 50,
-      "chararcter_count": 0,
-      "date": "2023-12-10"
+      "character_count": 170,
+      "date": "2023-12-05"
     },
     {
       "id": 6,
       "project_id": 2,
       "efficiency": 99,
       "duration_seconds": 50,
-      "chararcter_count": 0,
-      "date": "2023-12-11"
-    },
-    {
-      "id": 1,
-      "project_id": 3,
-      "efficiency": 20,
-      "duration_seconds": 50,
-      "chararcter_count": 0,
-      "date": "2023-12-12"
-    },
-    {
-      "id": 2,
-      "project_id": 1,
-      "efficiency": 100,
-      "duration_seconds": 50,
-      "chararcter_count": 0,
-      "date": "2023-12-13"
-    },
-    {
-      "id": 3,
-      "project_id": 2,
-      "efficiency": 67,
-      "duration_seconds": 50,
-      "date": "2023-12-14",
-      "chararcter_count": 0
-    },
-    {
-      "id": 4,
-      "project_id": 3,
-      "efficiency": 84,
-      "duration_seconds": 50,
-      "chararcter_count": 0,
-      "date": "2023-12-15"
-    },
-    {
-      "id": 5,
-      "project_id": 1,
-      "efficiency": 49,
-      "duration_seconds": 50,
-      "chararcter_count": 0,
-      "date": "2023-12-16"
-    },
-    {
-      "id": 6,
-      "project_id": 2,
-      "efficiency": 99,
-      "duration_seconds": 50,
-      "chararcter_count": 0,
-      "date": "2023-12-17"
+      "character_count": 190,
+      "date": "2023-12-06"
     },
     {
       "id": 7,
@@ -146,23 +74,327 @@
       "efficiency": 0,
       "duration_seconds": 1500,
       "character_count": 6,
-      "date": "2023-12-6"
+      "date": "2023-12-06"
     },
     {
       "id": 8,
-      "project_id": 5,
-      "efficiency": null,
-      "duration_seconds": 5,
-      "character_count": 0,
+      "project_id": 3,
+      "efficiency": 78,
+      "duration_seconds": 60,
+      "character_count": 250,
       "date": "2023-12-07"
     },
     {
       "id": 9,
-      "project_id": 5,
-      "efficiency": 100,
-      "duration_seconds": 5,
-      "character_count": 30,
+      "project_id": 1,
+      "efficiency": 30,
+      "duration_seconds": 45,
+      "character_count": 180,
       "date": "2023-12-07"
+    },
+    {
+      "id": 10,
+      "project_id": 2,
+      "efficiency": 100,
+      "duration_seconds": 45,
+      "character_count": 210,
+      "date": "2023-12-08"
+    },
+    {
+      "id": 11,
+      "project_id": 1,
+      "efficiency": 60,
+      "duration_seconds": 40,
+      "character_count": 160,
+      "date": "2023-12-08"
+    },
+    {
+      "id": 12,
+      "project_id": 3,
+      "efficiency": 92,
+      "duration_seconds": 55,
+      "character_count": 230,
+      "date": "2023-12-09"
+    },
+    {
+      "id": 13,
+      "project_id": 1,
+      "efficiency": 75,
+      "duration_seconds": 50,
+      "character_count": 200,
+      "date": "2023-12-09"
+    },
+    {
+      "id": 14,
+      "project_id": 2,
+      "efficiency": 85,
+      "duration_seconds": 55,
+      "character_count": 220,
+      "date": "2023-12-10"
+    },
+    {
+      "id": 15,
+      "project_id": 3,
+      "efficiency": 95,
+      "duration_seconds": 60,
+      "character_count": 250,
+      "date": "2023-12-10"
+    },
+    {
+      "id": 16,
+      "project_id": 1,
+      "efficiency": 80,
+      "duration_seconds": 55,
+      "character_count": 210,
+      "date": "2023-12-11"
+    },
+    {
+      "id": 17,
+      "project_id": 2,
+      "efficiency": 40,
+      "duration_seconds": 50,
+      "character_count": 180,
+      "date": "2023-12-11"
+    },
+    {
+      "id": 18,
+      "project_id": 3,
+      "efficiency": 90,
+      "duration_seconds": 60,
+      "character_count": 240,
+      "date": "2023-12-12"
+    },
+    {
+      "id": 19,
+      "project_id": 1,
+      "efficiency": 70,
+      "duration_seconds": 45,
+      "character_count": 190,
+      "date": "2023-12-12"
+    },
+    {
+      "id": 20,
+      "project_id": 2,
+      "efficiency": 85,
+      "duration_seconds": 55,
+      "character_count": 220,
+      "date": "2023-12-13"
+    },
+    {
+      "id": 21,
+      "project_id": 1,
+      "efficiency": 75,
+      "duration_seconds": 50,
+      "character_count": 200,
+      "date": "2023-12-13"
+    },
+    {
+      "id": 22,
+      "project_id": 3,
+      "efficiency": 65,
+      "duration_seconds": 40,
+      "character_count": 170,
+      "date": "2023-12-14"
+    },
+    {
+      "id": 23,
+      "project_id": 1,
+      "efficiency": 85,
+      "duration_seconds": 55,
+      "character_count": 210,
+      "date": "2023-12-14"
+    },
+    {
+      "id": 24,
+      "project_id": 2,
+      "efficiency": 95,
+      "duration_seconds": 60,
+      "character_count": 240,
+      "date": "2023-12-15"
+    },
+    {
+      "id": 25,
+      "project_id": 3,
+      "efficiency": 60,
+      "duration_seconds": 45,
+      "character_count": 190,
+      "date": "2023-12-15"
+    },
+    {
+      "id": 26,
+      "project_id": 1,
+      "efficiency": 75,
+      "duration_seconds": 50,
+      "character_count": 200,
+      "date": "2023-12-16"
+    },
+    {
+      "id": 27,
+      "project_id": 2,
+      "efficiency": 85,
+      "duration_seconds": 55,
+      "character_count": 220,
+      "date": "2023-12-16"
+    },
+    {
+      "id": 28,
+      "project_id": 3,
+      "efficiency": 95,
+      "duration_seconds": 60,
+      "character_count": 240,
+      "date": "2023-12-17"
+    },
+    {
+      "id": 29,
+      "project_id": 1,
+      "efficiency": 80,
+      "duration_seconds": 55,
+      "character_count": 210,
+      "date": "2023-12-17"
+    },
+    {
+      "id": 30,
+      "project_id": 2,
+      "efficiency": 70,
+      "duration_seconds": 45,
+      "character_count": 190,
+      "date": "2023-12-18"
+    },
+    {
+      "id": 31,
+      "project_id": 3,
+      "efficiency": 85,
+      "duration_seconds": 55,
+      "character_count": 220,
+      "date": "2023-12-18"
+    },
+    {
+      "id": 32,
+      "project_id": 1,
+      "efficiency": 75,
+      "duration_seconds": 50,
+      "character_count": 200,
+      "date": "2023-12-19"
+    },
+    {
+      "id": 33,
+      "project_id": 2,
+      "efficiency": 65,
+      "duration_seconds": 40,
+      "character_count": 170,
+      "date": "2023-12-19"
+    },
+    {
+      "id": 34,
+      "project_id": 3,
+      "efficiency": 90,
+      "duration_seconds": 60,
+      "character_count": 240,
+      "date": "2023-12-20"
+    },
+    {
+      "id": 35,
+      "project_id": 1,
+      "efficiency": 70,
+      "duration_seconds": 45,
+      "character_count": 190,
+      "date": "2023-12-20"
+    },
+    {
+      "id": 36,
+      "project_id": 2,
+      "efficiency": 80,
+      "duration_seconds": 55,
+      "character_count": 210,
+      "date": "2023-12-21"
+    },
+    {
+      "id": 37,
+      "project_id": 1,
+      "efficiency": 95,
+      "duration_seconds": 60,
+      "character_count": 240,
+      "date": "2023-12-21"
+    },
+    {
+      "id": 38,
+      "project_id": 3,
+      "efficiency": 60,
+      "duration_seconds": 45,
+      "character_count": 190,
+      "date": "2023-12-22"
+    },
+    {
+      "id": 39,
+      "project_id": 1,
+      "efficiency": 75,
+      "duration_seconds": 50,
+      "character_count": 200,
+      "date": "2023-12-22"
+    },
+    {
+      "id": 40,
+      "project_id": 2,
+      "efficiency": 85,
+      "duration_seconds": 55,
+      "character_count": 220,
+      "date": "2023-12-23"
+    },
+    {
+      "id": 41,
+      "project_id": 3,
+      "efficiency": 70,
+      "duration_seconds": 45,
+      "character_count": 190,
+      "date": "2023-12-23"
+    },
+    {
+      "id": 42,
+      "project_id": 1,
+      "efficiency": 80,
+      "duration_seconds": 55,
+      "character_count": 210,
+      "date": "2023-12-24"
+    },
+    {
+      "id": 43,
+      "project_id": 2,
+      "efficiency": 65,
+      "duration_seconds": 40,
+      "character_count": 170,
+      "date": "2023-12-24"
+    },
+    {
+      "id": 44,
+      "project_id": 3,
+      "efficiency": 90,
+      "duration_seconds": 60,
+      "character_count": 240,
+      "date": "2023-12-25"
+    },
+    {
+      "id": 45,
+      "project_id": 1,
+      "efficiency": 75,
+      "duration_seconds": 50,
+      "character_count": 200,
+      "date": "2023-12-25"
+    },
+    {
+      "id": 46,
+      "project_id": 1,
+      "efficiency": 75,
+      "duration_seconds": 5,
+      "character_count": 2,
+      "date": "2023-12-08"
+    },
+    {
+      "id": 47,
+      "project_id": 1,
+      "efficiency": 65,
+      "duration_seconds": 5,
+      "character_count": 1,
+      "date": "2023-12-08"
     }
   ]
 }

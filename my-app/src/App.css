@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-
 }
 
 .App-logo {
@@ -41,7 +40,6 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-
 }
 
 .clock-hour-hand {
@@ -140,12 +138,9 @@
   /* Enable vertical scrolling */
 }
 
-
-
 #listBanner button {
   margin-left: 5px;
   margin-bottom: 15px;
-
 }
 
 #listBanner p {
@@ -161,9 +156,6 @@
     text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
   }
 }
-
-
-
 
 #card:hover {
   background-color: #3a3f4a;
@@ -221,36 +213,30 @@ button:hover {
   margin: 20px auto 0px auto;
   border: 4px solid rgb(164, 164, 164);
   display: block;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 
   &:hover {
     transform: scale(1.05);
     /* background: linear-gradient(45deg, #2d4055, #b9d3e8); */
-
   }
-
-
 }
 
 * {
   color: white;
-
 }
-
-
 
 #project-content {
   color: white;
   background-color: black;
   border-radius: 8px;
   border: 4px solid rgb(164, 164, 164);
-  margin-top: 20px;
+  margin-top: 10px;
   transition: transform 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.05);
+  padding: 1cm;
+  font-size: larger;
+  &:focus {
+    transform: scale(1.01);
     /* background: linear-gradient(45deg, #2d4055, #b9d3e8); */
-
   }
 }
 
@@ -273,7 +259,6 @@ button {
   display: flex;
   justify-content: center;
   margin-top: 10px;
-
 }
 
 #startButton {
@@ -303,13 +288,34 @@ button {
   margin-top: 20px;
   transition: transform 0.3s ease-in-out;
 
-  &:hover {
+  &:focus {
     transform: scale(1.05);
     /* background: linear-gradient(45deg, #2d4055, #b9d3e8); */
-
   }
 }
 
 #colorButton {
   margin-left: 10px;
+}
+
+/* #graph {
+  width: 100vh;
+  display: flex;
+  align-self: flex-end;
+  flex-direction: column;
+} */
+
+.stats {
+  height: 850px;
+  flex-direction: column;
+}
+
+.total_time {
+  font-weight: bold;
+  display: flex;
+  justify-self: flex-end;
+  justify-content: center;
+  font-size: 40px;
+  /* font-family: "Verdana, Geneva, Tahoma, sans-serif"; */
+  text-shadow: rgb(0, 0, 0) 1px 1px 5px;
 }

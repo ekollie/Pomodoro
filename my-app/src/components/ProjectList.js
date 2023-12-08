@@ -15,11 +15,12 @@ function ProjectList({
       <div id="listBanner">
         <div id="clock-container">
           <img src="PomoLogoTomo.png" alt="logo" className="clock-background" />
-          <img src="PomoLogoHour.png" alt="logo" className="clock-hour-hand"/>
-          <img src="PomoLogoMin.png" alt="logo" className="clock-min-hand"/>
+          <img src="PomoLogoHour.png" alt="logo" className="clock-hour-hand" />
+          <img src="PomoLogoMin.png" alt="logo" className="clock-min-hand" />
         </div>
         <p>Projects</p>
         <button onClick={addProject}>+</button>
+        <button onClick={showGlobalStats}> All </button>
         {/* <img
           onClick={showGlobalStats}
           src="Globe.png"

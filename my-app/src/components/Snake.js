@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
-const numRows = 10;
-const numCols = 10;
+const numRows = 20;
+const numCols = 20;
 
 const Snake = () => {
   const getRandomFoodPosition = () => {
@@ -175,7 +175,7 @@ const Snake = () => {
                   ? "green"
                   : isFood
                   ? "red"
-                  : "white",
+                  : "lightGray",
                 border: "1px solid black",
               }}
             />

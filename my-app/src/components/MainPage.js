@@ -50,10 +50,11 @@ function MainPage() {
   ]);
   const [selectedProject, setSelectedProject] = useState({
     id: -1,
-    name: "Loading name",
-    category: "white",
-    content: "Loading Content",
+    name: "",
+    category: "",
+    content: "",
   });
+  const [globalStatsActive, setGlobalStatsActive] = useState(true);
 
   // Handler Functions
   const addProject = () => {
@@ -62,9 +63,8 @@ function MainPage() {
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         name: "new project",
-
-        content: "lorum ipsum",
-        category: 'white'
+        category: "new category",
+        content: "",
       }),
     })
       .then((res) => res.json())
@@ -130,6 +130,7 @@ function MainPage() {
       }
     });
     setSelectedProject(() => {
+      setGlobalStatsActive(false);
       return projectList
         .filter((project) => {
           return project.id == e.target.value;
@@ -141,20 +142,21 @@ function MainPage() {
 
   const showGlobalStats = () => {
     setSelectedSequences(sequences);
-    setSelectedProject([
-      {
-        id: -1,
-        name: "",
-        category: "",
-        content: "",
-      },
-    ]);
+    setGlobalStatsActive(true);
+    setSelectedProject({
+      id: -1,
+      name: "",
+      category: "white",
+      content: "",
+    });
   };
 
   return (
-    <div>
-      <div id="container">
+    <div class="container">
+      <div class="header">
         <ProjectName selectedProject={selectedProject} />
+      </div>
+      <div class="project_list" id="container">
         <ProjectList
           url={url}
           projectList={projectList}
@@ -163,19 +165,14 @@ function MainPage() {
           addProject={addProject}
           showGlobalStats={showGlobalStats}
         />
-      </div>
-      <div id="statsContainer">
-        <Stats
-          url={url}
-          selectedSequences={selectedSequences}
-          selectedProject={selectedProject}
-          projectList={projectList}
-          sequences={sequences}
-        />
-        <div>
-          <NavLink to="./snake">
-            <button>snake</button>
-          </NavLink>
+        <div class="stats" id="statsContainer">
+          <Stats
+            globalStatsActive={globalStatsActive}
+            selectedSequences={selectedSequences}
+            selectedProject={selectedProject}
+            projectList={projectList}
+            sequences={sequences}
+          />
         </div>
         {/* <NavLink to="./snake">Snake</NavLink>
             <NavLink to="./texteditor">TextEditor</NavLink> */}
