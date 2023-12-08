@@ -15,24 +15,37 @@ function ProjectCard({
       state: { name, id, content },
     });
   };
-  const getRGB = () => {
+  const getRGB = (opacity = 1) => {
     switch (category) {
-      case "red":
-        return "rgb(255, 0, 0, 0.1)";
-      case "blue":
-        return "rgb(50, 50, 255, 0.1)";
-      case "yellow":
-        return "rgb(255, 255, 0, 0.1)";
+      case "coding":
+        return `rgb(222, 65, 64, ${opacity})`;
+      case "writing":
+        return `rgb(0, 171, 240, ${opacity})`;
+      case "creative":
+        return `rgb(255, 255, 0, ${opacity})`;
       default:
-        return "rgb(255,255,255,0.1)";
+        return `rgb(255,255,255,${opacity})`;
     }
   };
+  const getColor = () => {
+    switch (category) {
+      case "coding":
+        return `red`;
+      case "writing":
+        return `blue`;
+      case "creative":
+        return `yellow`;
+      default:
+        return `white`;
+    }
+  };
+
   return (
     <div>
       <div
         style={{
-          boxShadow: `0px 1px 5px ${category}, 1px 0px 5px white`,
-          backgroundColor: getRGB(),
+          boxShadow: `0px 1px 1px ${getColor()}, 1px 0px 10px white`,
+          backgroundColor: getRGB(0.0),
         }}
         id="card"
         onClick={handleNavigate}

@@ -50,9 +50,9 @@ function MainPage() {
   ]);
   const [selectedProject, setSelectedProject] = useState({
     id: -1,
-    name: "Loading name",
-    category: "white",
-    content: "Loading Content",
+    name: "",
+    category: "",
+    content: "",
   });
   const [globalStatsActive, setGlobalStatsActive] = useState(true);
 
@@ -64,7 +64,7 @@ function MainPage() {
       body: JSON.stringify({
         name: "new project",
         category: "new category",
-        content: "lorum ipsum",
+        content: "",
       }),
     })
       .then((res) => res.json())
@@ -172,11 +172,6 @@ function MainPage() {
             projectList={projectList}
             sequences={sequences}
           />
-          <div>
-            <NavLink to="./snake">
-              <button>snake</button>
-            </NavLink>
-          </div>
         </div>
         {/* <NavLink to="./snake">Snake</NavLink>
             <NavLink to="./texteditor">TextEditor</NavLink> */}
