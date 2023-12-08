@@ -298,12 +298,12 @@ button {
   margin-left: 10px;
 }
 
-#graph {
+/* #graph {
   width: 100vh;
   display: flex;
   align-self: flex-end;
   flex-direction: column;
-}
+} */
 
 .stats {
   height: 850px;
@@ -311,6 +311,7 @@ button {
 }
 
 .total_time {
+  font-weight: bold;
   display: flex;
   justify-self: flex-end;
   justify-content: center;

@@ -40,6 +40,11 @@ function Graph({ selectedSequences, selectedProject }) {
     setDayFreq(newFreq);
   };
   const showLineGraph = () => {
+    const lineGraphStyles = {
+      width: "70vw",
+      alignSelf: "flex-end",
+      flexDirection: "column",
+    };
     return (
       <Line
         data={{
@@ -66,6 +71,7 @@ function Graph({ selectedSequences, selectedProject }) {
             maintainAspectRatio: false,
           },
         }}
+        style={lineGraphStyles}
       />
     );
   };
@@ -130,7 +136,7 @@ function Graph({ selectedSequences, selectedProject }) {
     return (
       <Radar
         data={{
-          labels: ["Average Efficiency"], // Only one label for the average efficiency
+          labels: ["Average Efficiency"],
           datasets: datasets.map((dataset) => ({
             label: dataset.label,
             data: dataset.data,
@@ -148,9 +154,9 @@ function Graph({ selectedSequences, selectedProject }) {
   };
   const showPolarAreaGraph = () => {
     const polarAreaGraphStyles = {
-      width: "100%", // Adjust width as needed
+      width: "100%",
       alignSelf: "flex-end",
-      flexDirection: "column", // Change the layout for polar area graph
+      flexDirection: "column",
     };
 
     return (
